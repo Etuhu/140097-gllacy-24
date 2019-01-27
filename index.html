@@ -8,13 +8,21 @@
     <header>
       <nav>
         <img src="http://placehold.it/154x64" width="154" height="64" alt="GllacyShop">
-        <ul>
-          <li>Каталог</li>
+        <ul class="main-menu">
+          <li>Каталог
+            <ul class="visually-hidden">
+              <li><a href="#">Новинки</a></li>
+              <li><a href="catalog.html">Сливочное</a></li>
+              <li><a href="#">Щербеты</a></li>
+              <li><a href="#">Фруктовый лед</a></li>
+              <li><a href="#">Мелорин</a></li>
+            </ul>
+          </li>
           <li><a href="#">Доставка и оплата</a></li>
           <li><a href="#">О компании</a></li>
         </ul>
       </nav>
-      <div>
+      <div class="user-block">
         <span>Поиск</span>
         <span>Вход</span>
         <span>Пусто</span>
@@ -23,32 +31,34 @@
       </div>
     </header>
     <main>
-      <section>
+      <section class="advantages">
         <h1>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h1>
-        <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
-        <p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
-        <p>Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
-        <p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
+        <ul>
+          <li>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
+          <li>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
+          <li>Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
+          <li>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
+        </ul>
       </section>
-      <article>
+      <article class="new-in-blog">
         <h2>Новое в нашем блоге</h2>
-        <a href="#"><b>10 способов сервировки фруктовых щербетов к столу</b></a>
+        <a href="#"><h3>10 способов сервировки фруктовых щербетов к столу</h3></a>
       </article>
-      <section>
+      <section class="subscribe">
         <h2 class="visually-hidden">Подписаться на рассылку от GllacyShop</h2>
         <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
       </section>
     </main>
     <footer>
-      <div>
+      <div class="social">
         <ul>
-          <li><a href="https://twitter.com/">Twitter</a></li>
-          <li><a href="https://www.instagram.com">Instagram</a></li>
-          <li><a href="https://www.facebook.com">Facebook</a></li>
-          <li><a href="https://vk.com">Vkontakte</a></li>
+          <li><a href="https://twitter.com/"><span class="visually-hidden">Twitter</span></a></li>
+          <li><a href="https://www.instagram.com"><span class="visually-hidden">Instagram</span></a></li>
+          <li><a href="https://www.facebook.com"><span class="visually-hidden">Facebook</span></a></li>
+          <li><a href="https://vk.com"><span class="visually-hidden">Vkontakte</span></a></li>
         </ul>
       </div>
-      <div>
+      <div class="footer-info">
         <ul>
           <li><a href="#"><b>Для поставщиков</b></a></li>
           <li><a href="#">О производстве</a></li>
@@ -56,9 +66,9 @@
           <li><a href="#">Экологические стандарты</a></li>
         </ul>
       </div>
-      <p>
-        <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="http://placehold.it/108x39" width="108" height="39" alt="HTML Academy">
-        Сделано в HTML Academy © 2019</a>
+      <p class="copyright">
+        <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="http://placehold.it/108x39" width="108" height="39" alt="HTML Academy"></a>
+        <a href="https://htmlacademy.ru/intensive/htmlcss">Сделано в HTML Academy © 2019</a>
       </p>
     </footer>
   </body>
