@@ -7,9 +7,9 @@
   <body>
     <header>
       <nav>
-        <img src="img/logo.svg" width="154" height="64" alt="GllacyShop">
+        <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина Глэйси">
         <ul class="main-menu">
-          <li>Каталог
+          <li><a href="#">Каталог</a>
             <ul class="visually-hidden">
               <li><a href="#">Новинки</a></li>
               <li><a href="catalog.html">Сливочное</a></li>
@@ -23,9 +23,19 @@
         </ul>
       </nav>
       <div class="user-block">
-        <span>Поиск</span>
-        <span>Вход</span>
-        <span>Пусто</span>
+        <a href="#">Поиск</a>
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <label class="visually-hidden" for="searchfield">Поиск по сайту</label><input type="search" name="search" id="searchfield" placeholder="Что ищем?">
+        </form>
+        <a href="#">Вход</a>
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <label class="visually-hidden" for="loginfield">Укажите электронную почту для входа в личный кабинет</label><input type="email" name="email" id="loginfield" placeholder="Электронная почта">
+          <label class="visually-hidden" for="passwordfield">Укажите пароль от личного кабинета</label><input type="password" name="password" id="passwordfield" placeholder="Пароль">
+          <button type="submit">Войти</button>
+          <a href="#">Забыли пароль?</a>
+          <a href="#">Новая регистрация</a>
+        </form>
+        <a href="#">Пусто</a>
         <p>С 10 до 20, ежедневно
         <br>8 812 450-25-25</p>
       </div>
@@ -91,6 +101,10 @@
       <section class="subscribe">
         <h2 class="visually-hidden">Подписаться на рассылку от GllacyShop</h2>
         <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <label for="subscribefield">Укажите вашу электронную почту</label><input type="email" name="email" id="subscribefield" placeholder="Электронная почта">
+          <button type="submit">Отправить</button>
+        </form>
       </section>
       <section class="map">
         <img src="http://placehold.it/1200x430" width="1200" height="430" alt="Расположение GllacyShop на карте" title="Расположение GllacyShop на карте">
@@ -108,10 +122,10 @@
     <footer>
       <div class="social">
         <ul>
-          <li><a href="https://twitter.com/"><span class="visually-hidden">Twitter</span></a></li>
-          <li><a href="https://www.instagram.com"><span class="visually-hidden">Instagram</span></a></li>
-          <li><a href="https://www.facebook.com"><span class="visually-hidden">Facebook</span></a></li>
-          <li><a href="https://vk.com"><span class="visually-hidden">Vkontakte</span></a></li>
+          <li><a href="https://twitter.com/"><span class="visually-hidden">Твиттер магазина Глэйси</span></a></li>
+          <li><a href="https://www.instagram.com"><span class="visually-hidden">Инстаграм магазина Глэйси</span></a></li>
+          <li><a href="https://www.facebook.com"><span class="visually-hidden">Фейсбук магазина Глэйси</span></a></li>
+          <li><a href="https://vk.com"><span class="visually-hidden">Страница Вконтакте магазина Глэйси</span></a></li>
         </ul>
       </div>
       <div class="footer-info">
@@ -127,5 +141,15 @@
         <a href="https://htmlacademy.ru/intensive/htmlcss">Сделано в HTML Academy © 2019</a>
       </p>
     </footer>
+    <section class="modal modal-feedback">
+      <h2>Мы обязательно вам ответим!</h2>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <label class="visually-hidden" for="feedback-username">Укажите своё имя</label><input type="text" name="feedback-username" id="feedback-username" placeholder="Как вас зовут?">
+        <label class="visually-hidden" for="feedback-email">Укажите свою почту</label><input type="text" name="feedback-email" id="feedback-email" placeholder="Ваша почта для ответа?">
+        <label class="visually-hidden" for="feedback-text">Укажите текст вашего отзыва</label><textarea name="feedback-text" id="feedback-text" placeholder="Напишите что-нибудь..." cols="40" rows="6"></textarea>
+        <button type="submit">Отправить</button>
+        <button class="modal-close" type="button" aria-label="Закрыть окно обратной связи">x</button>
+      </form>
+    </section>
   </body>
 </html>

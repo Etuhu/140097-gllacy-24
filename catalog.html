@@ -7,9 +7,9 @@
   <body>
     <header>
       <nav>
-        <a href="index.html"><img src="img/logo.svg" width="154" height="64" alt="GllacyShop"></a>
+        <a href="index.html"><img src="img/logo.svg" width="154" height="64" alt="Логотип магазина Глэйси"></a>
         <ul class="main-menu">
-          <li>Каталог
+          <li><a href="#">Каталог</a>
             <ul class="visually-hidden">
               <li><a href="#">Новинки</a></li>
               <li><a href="#">Сливочное</a></li>
@@ -23,9 +23,40 @@
         </ul>
       </nav>
       <div class="user-block">
-        <span>Поиск</span>
-        <span>Вход</span>
-        <span>Пусто</span>
+        <a href="#">Поиск</a>
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <label class="visually-hidden" for="searchfield">Поиск по сайту</label><input type="search" name="search" id="searchfield" placeholder="Что ищем?">
+        </form>
+        <a href="#">Вход</a>
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <label class="visually-hidden" for="loginfield">Укажите электронную почту для входа в личный кабинет</label><input type="email" name="email" id="loginfield" placeholder="Электронная почта">
+          <label class="visually-hidden" for="passwordfield">Укажите пароль от личного кабинета</label><input type="password" name="password" id="passwordfield" placeholder="Пароль">
+          <button type="submit">Войти</button>
+          <a href="#">Забыли пароль?</a>
+          <a href="#">Новая регистрация</a>
+        </form>
+        <a href="#">2 товара</a>
+        <section class="cart-content">
+          <h2 class="visually-hidden">Содержимое корзины</h2>
+          <table>
+            <caption>Итого: 750 руб.</caption>
+            <tr>
+              <td aria-label="Удалить из корзины"><button type="button">x</button></td>
+              <td></td>
+              <td>Пломбир с апельсиновым джемом</td>
+              <td>1,5 кг х 200 руб.</td>
+              <td>300 руб.</td>
+            </tr>
+            <tr>
+              <td aria-label="Удалить из корзины"><button type="button">x</button></td>
+              <td></td>
+              <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+              <td>1,5 кг х 300 руб.</td>
+              <td>450 руб.</td>
+            </tr>
+          </table>
+          <a href="#">Оформить заказ</a>
+        </section>
         <p>С 10 до 20, ежедневно
         <br>8 812 450-25-25</p>
       </div>
@@ -39,7 +70,46 @@
       <h1>Сливочное мороженое</h1>
       <section class="filters">
         <h2 class="visually-hidden">Подбор мороженого на вкус и цвет</h2>
-        <!--Здесь будут фильтры-->
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <label for="sorting">Сортировка:</label>
+          <select name="sorting" id="sorting">
+            <option value="most-popular" selected>по популярности</option>
+            <option value="not expensive">сначала недорогие</option>
+            <option value="expensive">сначала дорогие</option>
+            <option value="fatness">по жирности</option>
+          </select>
+          <span class="pricerange pricerange-title">Цена: 100 руб. – 500 руб.</span>
+          <div class="pricerange pricerange-filter"><span class="visually-hidden">Фильтр по стоимости</span></div>
+          <fieldset>
+            <legend>Жирность:</legend>
+            <ul class="fatness-sorting">
+              <li><input type="radio" name="fatness" id="0%" value="0%">
+                <label for="0%">0%</label></li>
+                <li><input type="radio" name="fatness" id="<10%" value="<10%" checked>
+                <label for="<10%">до 10%</label></li>
+                <li><input type="radio" name="fatness" id="<30%" value="<30%">
+                <label for="<30%">до 30%</label></li>
+                <li><input type="radio" name="fatness" id=">30%" value=">30%">
+                <label for=">30%">выше 30%</label></li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Наполнители:</legend>
+            <ul>
+              <li><input type="checkbox" name="chocolate" id="chocolate" value="yes" checked>
+              <label for="chocolate">шоколадные</label></li>
+              <li><input type="checkbox" name="sugar" id="sugar" value="yes" checked>
+              <label for="sugar">сахарные приспыки</label></li>
+              <li><input type="checkbox" name="fruits" id="fruits" value="yes">
+              <label for="fruits">фрукты</label></li>
+              <li><input type="checkbox" name="syrups" id="syrups" value="yes">
+              <label for="syrups">сиропы</label></li>
+              <li><input type="checkbox" name="jams" id="jams" value="yes">
+              <label for="jams">джемы</label></li>
+            </ul>
+          </fieldset>
+          <button type="submit">Применить</button>
+        </form>
       </section>
       <section class="icecream-catalog">
         <h2 class="visually-hidden">Виды сливочного мороженого</h2>
@@ -107,23 +177,23 @@
         </ul>
         <section class="pagination">
           <ul class="pagination-list">
-            <li>1</li>
+            <li><a>1</a></li>
             <li><a href="#">2</a></li>
             <li><a href="#">3</a></li>
             <li><a href="#">4</a></li>
             <li><a href="#">5</a></li>
           </ul>
-          <span><a href="#">></a></span>
+          <span><a href="#" title="Перейти на следующую страницу">></a></span>
         </section>
       </section>
     </main>
     <footer>
       <div class="social">
         <ul>
-          <li><a href="https://twitter.com/"><span class="visually-hidden">Twitter</span></a></li>
-          <li><a href="https://www.instagram.com"><span class="visually-hidden">Instagram</span></a></li>
-          <li><a href="https://www.facebook.com"><span class="visually-hidden">Facebook</span></a></li>
-          <li><a href="https://vk.com"><span class="visually-hidden">Vkontakte</span></a></li>
+          <li><a href="https://twitter.com/"><span class="visually-hidden">Твиттер магазина Глэйси</span></a></li>
+          <li><a href="https://www.instagram.com"><span class="visually-hidden">Инстаграм магазина Глэйси</span></a></li>
+          <li><a href="https://www.facebook.com"><span class="visually-hidden">Фейсбук магазина Глэйси</span></a></li>
+          <li><a href="https://vk.com"><span class="visually-hidden">Страница Вконтакте магазина Глэйси</span></a></li>
         </ul>
       </div>
       <div class="footer-info">
