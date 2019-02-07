@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -10,12 +13,12 @@
         <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина Глэйси">
         <ul class="main-menu">
           <li><a href="#">Каталог</a>
-            <ul class="visually-hidden">
-              <li><a href="#">Новинки</a></li>
-              <li><a href="catalog.html">Сливочное</a></li>
-              <li><a href="#">Щербеты</a></li>
-              <li><a href="#">Фруктовый лед</a></li>
-              <li><a href="#">Мелорин</a></li>
+            <ul class="sub-menu visually-hidden">
+              <li class="sub-menu-item sub-menu-item-new"><a href="#">Новинки</a></li>
+              <li class="sub-menu-item"><a href="catalog.html">Сливочное</a></li>
+              <li class="sub-menu-item"><a href="#">Щербеты</a></li>
+              <li class="sub-menu-item"><a href="#">Фруктовый лед</a></li>
+              <li class="sub-menu-item"><a href="#">Мелорин</a></li>
             </ul>
           </li>
           <li><a href="#">Доставка и оплата</a></li>
@@ -23,21 +26,21 @@
         </ul>
       </nav>
       <div class="user-block">
-        <button type="button">Поиск</button>
-        <form action="https://echo.htmlacademy.ru" method="post">
+        <button class="user-block-btn search-btn" type="button">Поиск</button>
+        <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
           <label class="visually-hidden" for="searchfield">Поиск по сайту</label><input type="search" name="search" id="searchfield" placeholder="Что ищем?">
         </form>
-        <a href="#">Вход</a>
-        <form action="https://echo.htmlacademy.ru" method="post">
+        <a class="user-block-btn login-btn" href="#">Вход</a>
+        <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
           <label class="visually-hidden" for="loginfield">Укажите электронную почту для входа в личный кабинет</label><input type="email" name="email" id="loginfield" placeholder="Электронная почта">
           <label class="visually-hidden" for="passwordfield">Укажите пароль от личного кабинета</label><input type="password" name="password" id="passwordfield" placeholder="Пароль">
           <button type="submit">Войти</button>
           <a href="#">Забыли пароль?</a>
           <a href="#">Новая регистрация</a>
         </form>
-        <a href="#">Пусто</a>
-        <p>С 10 до 20, ежедневно
-        <br>8 812 450-25-25</p>
+        <a class="user-block-btn cart-btn" href="#">Пусто</a>
+        <p><span class="time-of-work">С 10 до 20, ежедневно</span>
+        <br><span class="phone-number">8 812 450-25-25</span></p>
       </div>
     </header>
     <main>
@@ -45,19 +48,19 @@
         <p><b>Крем-брюле и пломбир с малиновым джемом</b></p>
         <p><b>Шоколадный пломбир и лимонный сорбет</b></p>
         <p><b>Пломбир с помадкой и клубничный щербет</b></p>
-        <a href="#">Давайте оба!</a>
+        <a class="btn main-cover-btn" href="#">Давайте оба!</a>
       </section>
       <section class="bonus">
         <ul>
-          <li>
+          <li class="bonus-block bonus-block-raspberry">
             <h2>Малинка даром!</h2>
             <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-            <a href="#">Хочу варенье!</a>
+            <a class="btn" href="#">Хочу варенье!</a>
           </li>
-          <li>
+          <li class="bonus-block bonus-block-chocolate">
             <h2>Шоколадки даром!</h2>
             <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно. </p>
-            <a href="#">Хочу шоколадки!</a>
+            <a class="btn" href="#">Хочу шоколадки!</a>
           </li>
         </ul>
       </section>
