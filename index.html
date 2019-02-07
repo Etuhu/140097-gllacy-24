@@ -64,24 +64,24 @@
           </li>
         </ul>
       </section>
-      <section class="icecream-mini-catalog">
+      <section class="mini-catalog">
         <ul>
-          <li>
+          <li class="catalog-item">
             <img src="img/citrus-icecream.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
             <p><b>310 ₽/кг</b></p>
             <h3><a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
           </li>
-          <li>
+          <li class="catalog-item">
             <img src="img/coffee-icecream.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
             <p><b>380 ₽/кг</b></p>
             <h3><a href="#">Сливочно-кофейное с кусочками шоколада</a></h3>
           </li>
-          <li>
+          <li class="catalog-item">
             <img src="img/strawberry-icecream.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
             <p><b>355 ₽/кг</b></p>
             <h3><a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
           </li>
-          <li>
+          <li class="catalog-item">
             <img src="img/caramel-cream-icecream.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
             <p><b>415 ₽/кг</b></p>
             <h3><a href="#">Сливочное крем-брюле с карамельной подливкой</a></h3>
@@ -99,49 +99,49 @@
       </section>
       <article class="new-in-blog">
         <h2>Новое в нашем блоге</h2>
-        <a href="#"><h3>10 способов сервировки фруктовых щербетов к столу</h3></a>
+        <a href="#">10 способов сервировки фруктовых щербетов к столу</a>
       </article>
       <section class="subscribe">
         <h2 class="visually-hidden">Подписаться на рассылку от GllacyShop</h2>
         <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
         <form action="https://echo.htmlacademy.ru" method="post">
-          <label for="subscribefield">Укажите вашу электронную почту</label><input type="email" name="email" id="subscribefield" placeholder="Электронная почта">
-          <button type="submit">Отправить</button>
+          <label class="visually-hidden" for="subscribefield">Укажите вашу электронную почту</label><input type="email" name="email" id="subscribefield" placeholder="Электронная почта">
+          <button class="btn" type="submit">Отправить</button>
         </form>
       </section>
       <section class="map">
-        <img src="http://placehold.it/1200x430" width="1200" height="430" alt="Расположение GllacyShop на карте" title="Расположение GllacyShop на карте">
+        <h2 class="visually-hidden">Расположение ГлэйсиШоп на карте</h2>
         <div class="contacts">
-          <h2>Адрес главного офиса и офлайн-магазина:</h2>
-          <p><b>ул. Большая Конюшенная
-          <br>19/8, Санкт-Петербург</b></p>
-          <p>Для заказов по телефону:
-          <br><b>8 812 450-25-25</b>
-          <br>(с 10 до 20 ежедневно)</p>
-          <a href="contacts.html">Форма обратной связи</a>
+          <h3>Адрес главного офиса и офлайн-магазина:</h3>
+          <p>ул. Большая Конюшенная
+          <br>19/8, Санкт-Петербург</p>
+          <p>Для заказов по телефону:</p>
+          <p>8 812 450-25-25</p>
+          <p>(с 10 до 20 ежедневно)</p>
+          <a class="btn" href="contacts.html">Форма обратной связи</a>
         </div>
       </section>
     </main>
     <footer>
       <div class="social">
         <ul>
-          <li><a href="https://twitter.com/"><span class="visually-hidden">Твиттер магазина Глэйси</span></a></li>
-          <li><a href="https://www.instagram.com"><span class="visually-hidden">Инстаграм магазина Глэйси</span></a></li>
-          <li><a href="https://www.facebook.com"><span class="visually-hidden">Фейсбук магазина Глэйси</span></a></li>
-          <li><a href="https://vk.com"><span class="visually-hidden">Страница Вконтакте магазина Глэйси</span></a></li>
+          <li><a class="social-btn social-btn-twitter" href="https://twitter.com/"><span class="visually-hidden">Твиттер магазина Глэйси</span></a></li>
+          <li><a class="social-btn social-btn-instagram" href="https://www.instagram.com"><span class="visually-hidden">Инстаграм магазина Глэйси</span></a></li>
+          <li><a class="social-btn social-btn-facebook" href="https://www.facebook.com"><span class="visually-hidden">Фейсбук магазина Глэйси</span></a></li>
+          <li><a class="social-btn social-btn-vkontakte" href="https://vk.com"><span class="visually-hidden">Страница Вконтакте магазина Глэйси</span></a></li>
         </ul>
       </div>
       <div class="footer-info">
         <ul>
-          <li><a href="#"><b>Для поставщиков</b></a></li>
-          <li><a href="#">О производстве</a></li>
-          <li><a href="#">Наши документы</a></li>
-          <li><a href="#">Экологические стандарты</a></li>
+          <li class="footer-info-item"><a href="#">Для поставщиков</a></li>
+          <li class="footer-info-item"><a href="#">О производстве</a></li>
+          <li class="footer-info-item"><a href="#">Наши документы</a></li>
+          <li class="footer-info-item"><a href="#">Экологические стандарты</a></li>
         </ul>
       </div>
       <p class="copyright">
-        <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="108" height="38" alt="HTML Academy"></a>
-        <a href="https://htmlacademy.ru/intensive/htmlcss">Сделано в HTML Academy © 2019</a>
+        <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="125" height="39" alt="HTML Academy"></a>
+        <br><a href="https://htmlacademy.ru/intensive/htmlcss">Сделано в HTML Academy © 2019</a>
       </p>
     </footer>
     <section class="modal modal-feedback">
