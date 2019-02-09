@@ -38,7 +38,7 @@
         <a href="#">Забыли пароль?</a>
         <a href="#">Новая регистрация</a>
       </form>
-      <a class="user-block-btn cart-btn" href="#">Пусто</a>
+      <a class="user-block-btn cart-btn" href="#">2 товара</a>
       <p><span class="time-of-work">С 10 до 20, ежедневно</span>
       <br><span class="phone-number">8 812 450-25-25</span></p>
     </div>
@@ -52,45 +52,51 @@
       <h1 class="catalog-title">Сливочное мороженое</h1>
       <section class="filters">
         <h2 class="visually-hidden">Подбор мороженого на вкус и цвет</h2>
-        <form action="https://echo.htmlacademy.ru" method="post">
+        <form class="filters-form" action="https://echo.htmlacademy.ru" method="post">
           <label for="sorting">Сортировка:</label>
-          <select name="sorting" id="sorting">
-            <option value="most-popular" selected>по популярности</option>
-            <option value="not expensive">сначала недорогие</option>
-            <option value="expensive">сначала дорогие</option>
-            <option value="fatness">по жирности</option>
+          <select class="sorting-select" name="sorting" id="sorting">
+            <option class="sorting-select-item" value="most-popular" selected>по популярности</option>
+            <option class="sorting-select-item" value="not expensive">сначала недорогие</option>
+            <option class="sorting-select-item" value="expensive">сначала дорогие</option>
+            <option class="sorting-select-item" value="fatness">по жирности</option>
           </select>
-          <span class="pricerange pricerange-title">Цена: 100 руб. – 500 руб.</span>
-          <div class="pricerange pricerange-filter"><span class="visually-hidden">Фильтр по стоимости</span></div>
+          <p class="pricerange-title">Цена: 100 руб. – 500 руб.</p>
+          <div class="pricerange-filter">
+            <div class="pricerange-filter-line">
+              <span class="pricerange-button pricerange-button-left"></span>
+              <span class="pricerange-button pricerange-button-right"></span>
+            </div>
+            <span class="visually-hidden">Фильтр по стоимости</span>
+          </div>
           <fieldset>
             <legend>Жирность:</legend>
             <ul class="fatness-sorting">
-              <li><input type="radio" name="fatness" id="0%" value="0%">
-                <label for="0%">0%</label></li>
-                <li><input type="radio" name="fatness" id="<10%" value="<10%" checked>
-                <label for="<10%">до 10%</label></li>
-                <li><input type="radio" name="fatness" id="<30%" value="<30%">
-                <label for="<30%">до 30%</label></li>
-                <li><input type="radio" name="fatness" id=">30%" value=">30%">
-                <label for=">30%">выше 30%</label></li>
+              <li class="fatness-sorting-item"><input type="radio" name="fatness" id="0%" value="0%">
+              <label for="0%">0%</label></li>
+              <li class="fatness-sorting-item"><input type="radio" name="fatness" id="<10%" value="<10%" checked>
+              <label for="<10%">до 10%</label></li>
+              <li class="fatness-sorting-item"><input type="radio" name="fatness" id="<30%" value="<30%">
+              <label for="<30%">до 30%</label></li>
+              <li class="fatness-sorting-item"><input type="radio" name="fatness" id=">30%" value=">30%">
+              <label for=">30%">выше 30%</label></li>
             </ul>
           </fieldset>
           <fieldset>
             <legend>Наполнители:</legend>
-            <ul>
-              <li><input type="checkbox" name="chocolate" id="chocolate" value="yes" checked>
+            <ul class="type-sorting">
+              <li class="type-sorting-item"><input type="checkbox" name="chocolate" id="chocolate" value="yes" checked>
               <label for="chocolate">шоколадные</label></li>
-              <li><input type="checkbox" name="sugar" id="sugar" value="yes" checked>
+              <li class="type-sorting-item"><input type="checkbox" name="sugar" id="sugar" value="yes" checked>
               <label for="sugar">сахарные приспыки</label></li>
-              <li><input type="checkbox" name="fruits" id="fruits" value="yes">
+              <li class="type-sorting-item"><input type="checkbox" name="fruits" id="fruits" value="yes">
               <label for="fruits">фрукты</label></li>
-              <li><input type="checkbox" name="syrups" id="syrups" value="yes">
+              <li class="type-sorting-item"><input type="checkbox" name="syrups" id="syrups" value="yes">
               <label for="syrups">сиропы</label></li>
-              <li><input type="checkbox" name="jams" id="jams" value="yes">
+              <li class="type-sorting-item"><input type="checkbox" name="jams" id="jams" value="yes">
               <label for="jams">джемы</label></li>
             </ul>
           </fieldset>
-          <button type="submit">Применить</button>
+          <button class="filter-btn" type="submit">Применить</button>
         </form>
       </section>
       <section class="catalog">
@@ -158,14 +164,15 @@
           </li>
         </ul>
         <section class="pagination">
+          <span><a class="icon-left" href="#" title="Перейти на предыдущую страницу"></a></span>
           <ul class="pagination-list">
-            <li><a>1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
+            <li class="pagination-item pagination-item-current"><a>1</a></li>
+            <li class="pagination-item"><a href="#">2</a></li>
+            <li class="pagination-item"><a href="#">3</a></li>
+            <li class="pagination-item"><a href="#">4</a></li>
+            <li class="pagination-item"><a href="#">5</a></li>
           </ul>
-          <span><a href="#" title="Перейти на следующую страницу">></a></span>
+          <span><a class="icon-right" href="#" title="Перейти на следующую страницу"></a></span>
         </section>
       </section>
     </main>
