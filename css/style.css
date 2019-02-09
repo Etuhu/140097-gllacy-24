@@ -1,3 +1,13 @@
+
+/* 1) Разбить общие стили - сделано
+2) добавить focus - сделано
+3) Проверить прозрачность на кнопах - сделано
+4) Убрать height у блоков - сделано
+5) catalog-item h3 прописать center - сделано
+6) убрать селекторы через first-child и т.д. - сделано
+7) Добавить стили для соц. кнопок - сделано */
+
+
 body {
   margin: 0;
   padding: 0;
@@ -13,7 +23,7 @@ body {
 
 .visually-hidden {
   position: absolute;
-  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
   width: 1px;
   height: 1px;
   margin: -1px;
@@ -28,10 +38,7 @@ a {
 
 a:hover,
 a:active,
-.copyright a:last-of-type:hover,
-.copyright a:last-of-type:active,
-.breadcrumbs-item a:hover,
-.breadcrumbs-item a:active {
+a:focus {
   color: #ffbc9e;
 }
 
@@ -41,9 +48,21 @@ a:active,
   color: #ffffff;
 }
 
-.main-menu a:hover {
+.main-menu a:hover,
+.main-menu a:focus {
   color: #323232;
   background-color: #f7f6f3;
+  border: solid 1px #ffffff;
+}
+
+.main-menu a:active {
+  background-color: #ededed;
+  box-shadow: inset 0 2px 0 1px #696969;
+}
+
+.main-menu,
+.main-menu ul {
+  list-style: none;
 }
 
 .current-page-item a {
@@ -59,11 +78,13 @@ a:active,
   background-color: #f8f7f4;
 }
 
-.sub-menu-item a:hover {
+.sub-menu-item a:hover,
+.sub-menu-item a:focus {
   background-color: #fbded7;
 }
 
-.sub-menu-item a:active {
+.sub-menu-item a:active,
+.sub-menu-item a:focus {
   background-color: #f6b5a5;
 }
 
@@ -75,18 +96,6 @@ a:active,
   background-color: #d07058;
 }
 
-.main-menu,
-.main-menu ul,
-.breadcrumbs,
-.catalog ul,
-.bonus ul,
-.mini-catalog ul,
-.advantages ul,
-.social ul,
-.footer-info ul {
-  list-style: none;
-}
-
 .user-block-btn {
   font-size: 14px;
   line-height: 16px;
@@ -94,13 +103,14 @@ a:active,
   text-decoration: none;
   color: #ffffff;
 
-  background-color: #a1b4a9;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
-.user-block-btn:hover {
+.user-block-btn:hover,
+.user-block-btn:focus {
   color: #323232;
 
-  background-color: #f8f7f4;
+  background-color: rgba(248, 247, 244, 1);
 }
 
 .breadcrumbs-item,
@@ -111,11 +121,25 @@ a:active,
   color: #ffffff;
 }
 
+.breadcrumbs {
+  list-style: none;
+}
+
+.breadcrumbs-item a:hover,
+.breadcrumbs-item a:active,
+.breadcrumbs-item a:focus {
+  color: #ffbc9e;
+}
+
 .catalog-title {
   font-size: 35px;
   line-height: 41px;
   font-weight: 700;
   color: #ffffff;
+}
+
+.catalog ul {
+  list-style: none;
 }
 
 .time-of-work {
@@ -151,7 +175,15 @@ a:active,
 
 .btn:hover {
   color: #ffffff;
+  background-color: #f07a63;
+  box-shadow: 0 2px 0 2px #ac1000;
+}
+
+.btn:active,
+.btn:focus {
+  color: #ffffff;
   background-color: #f17b64;
+  box-shadow: inset 0 2px 0 2px #942718;
 }
 
 .main-cover-btn {
@@ -159,9 +191,12 @@ a:active,
   line-height: 44px;
 }
 
+.bonus ul {
+  list-style: none;
+}
+
 .bonus-block {
   width: 560px;
-  height: 230px;
 
   background-repeat: no-repeat;
   background-position: center;
@@ -192,6 +227,10 @@ a:active,
   background-image: url("../img/chocolate-bg.png");
 }
 
+.mini-catalog ul {
+  list-style: none;
+}
+
 .catalog-item p {
   font-size: 45px;
   line-height: 45px;
@@ -201,17 +240,21 @@ a:active,
 
 .catalog-item h3 {
   font-weight: 500;
+  text-align: center;
   color: #ffffff;
 }
 
 .advantages {
   width: 1148px;
-  height: 305px;
   padding: 20px;
 
   background-color: #e9d9ba;
   background-image: url("../img/waffle-bg.png");
   border-radius: 15px;
+}
+
+.advantages ul {
+  list-style: none;
 }
 
 .advantages h1 {
@@ -222,7 +265,6 @@ a:active,
 
 .new-in-blog {
   width: 560px;
-  height: 220px;
 
   background-color: #ffffff;
   background-image: url("../img/strawberry-bg.png");
@@ -245,13 +287,13 @@ a:active,
 }
 
 .new-in-blog a:hover,
-.new-in-blog a:active {
+.new-in-blog a:active,
+.new-in-blog a:focus  {
   color: #e84d37;
 }
 
 .subscribe {
   width: 560px;
-  height: 220px;
 
   background-color: #f8f7f4;
   background-image:
@@ -268,7 +310,6 @@ a:active,
 
 .map {
   width: 1200px;
-  height: 430px;
 
   background-image: url("../img/map.jpg");
   background-repeat: no-repeat;
@@ -277,7 +318,6 @@ a:active,
 
 .contacts {
   width: 300px;
-  height: 305px;
 
   font-size: 14px;
   line-height: 20px;
@@ -288,42 +328,41 @@ a:active,
   border-radius: 15px;
 }
 
-.contacts h3 {
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 400;
-  color: #323232;
-}
-
-.contacts p:first-of-type {
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 700;
-}
-
-.contacts p:nth-last-of-type(2) {
-  font-size: 18px;
-  line-height: 22px;
-  font-weight: 700;
-}
-
-.contacts p:nth-of-type(2n) {
-  font-size: 14px;
-  line-height: 20px;
-  font-weight: 400;
-}
-
-.contacts p:last-of-type {
-  line-height: 22px;
+.social ul {
+  list-style: none;
 }
 
 .social-btn {
   display: block;
   width: 32px;
   height: 32px;
+  border: solid 3px rgba(255, 255, 255, 0.5);
+
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  opacity: 0.8;
 }
 
-.social-btn-twitter {
+.social-btn:hover {
+  border: solid 3px rgba(255, 255, 255, 0.7);
+
+  opacity: 1;
+}
+
+.social-btn:active,
+.social-btn:focus {
+  border: solid 3px rgba(255, 255, 255, 0.7);
+
+  /* box-shadow: inset 0 2px 0 1px rgba(136, 136, 136, 1); */
+  opacity: 1;
+}
+
+.social-pic:active path,
+.social-pic:focus path {
+  fill: rgba(233, 233, 233, 1);
+}
+
+/* .social-btn-twitter {
   background-image: url("../img/twitter-pic.svg");
 }
 
@@ -339,17 +378,21 @@ a:active,
   background-image: url("../img/vk-pic.svg");
 }
 
+.footer-info ul {
+  list-style: none;
+} */
+
 .footer-info-item a {
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
 }
 
-.footer-info-item:first-child a {
+.provider-item a {
   font-weight: 700;
 }
 
-.copyright a:last-of-type {
+.make-in-htmlacademy {
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
