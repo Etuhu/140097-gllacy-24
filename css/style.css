@@ -1,13 +1,3 @@
-
-/* 1) Разбить общие стили - сделано
-2) добавить focus - сделано
-3) Проверить прозрачность на кнопах - сделано
-4) Убрать height у блоков - сделано
-5) catalog-item h3 прописать center - сделано
-6) убрать селекторы через first-child и т.д. - сделано
-7) Добавить стили для соц. кнопок - сделано */
-
-
 body {
   margin: 0;
   padding: 0;
@@ -169,9 +159,19 @@ a:focus {
   background-image: url("../img/filter-button.svg");
 } */
 
+.fatness {
+  width: 415px;
+}
+
+.type {
+  width: 703px;
+}
+
 .fatness-sorting,
 .type-sorting {
   list-style: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
 }
 
 .fatness-sorting-item label,
@@ -268,20 +268,37 @@ a:focus {
   color: #ffffff;
   text-decoration: none;
 
-  background-color: #ea5339;
+  background-image: linear-gradient(to top, #e74a35, #f26843);
+  box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
 }
 
-.btn:hover {
-  color: #ffffff;
-  background-color: #f07a63;
-  box-shadow: 0 2px 0 2px #ac1000;
+.raspberry-btn {
+  opacity: 0.99;
+  box-shadow: 0px 2px 2px 0 rgba(85, 8, 0, 0.54);
+  background-image: linear-gradient(to top, #ca3824, #f26843);
 }
 
-.btn:active,
+.raspberry-btn:hover {
+  opacity: 1;
+  box-shadow: 0px 1px 2px 0 #ac1000;
+}
+
+.btn:hover,
 .btn:focus {
   color: #ffffff;
-  background-color: #f17b64;
-  box-shadow: inset 0 2px 0 2px #942718;
+  background-color: #f07a63;
+  box-shadow: 0px 2px 2px 0 #ac1000;
+  background-image:
+    linear-gradient(to top, #e74a35, #f26843),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
+}
+
+.btn:active {
+  color: #ffffff;
+  box-shadow: inset 0px 2px 2px 0 #942718;
+  background-image:
+    linear-gradient(to bottom, #e74a35, #f26843),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07));
 }
 
 .main-cover-btn {
@@ -525,26 +542,6 @@ a:focus {
 .social-pic:focus path {
   fill: rgba(233, 233, 233, 1);
 }
-
-/* .social-btn-twitter {
-  background-image: url("../img/twitter-pic.svg");
-}
-
-.social-btn-instagram {
-  background-image: url("../img/instagram-pic.svg");
-}
-
-.social-btn-facebook {
-  background-image: url("../img/fb-pic.svg");
-}
-
-.social-btn-vkontakte {
-  background-image: url("../img/vk-pic.svg");
-}
-
-.footer-info ul {
-  list-style: none;
-} */
 
 .footer-info-item a {
   font-size: 13px;
