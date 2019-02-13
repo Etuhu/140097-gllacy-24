@@ -7,10 +7,10 @@
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
-<body>
-  <header>
-    <nav>
-      <a href="index.html"><img src="img/logo.svg" width="154" height="64" alt="Логотип магазина Глэйси"></a>
+<body class="catalog-page-body">
+  <header class="main-header container">
+    <nav class="main-header-navigation">
+      <a href="index.html"><img class="logo" src="img/logo.svg" width="154" height="64" alt="Логотип магазина Глэйси"></a>
       <ul class="main-menu">
         <li class="current-page-item"><a href="#">Каталог</a>
           <ul class="sub-menu visually-hidden">
@@ -26,7 +26,7 @@
       </ul>
     </nav>
     <div class="user-block">
-      <button class="user-block-btn search-btn" type="button">Поиск</button>
+      <button class="user-block-btn search-btn" type="button"><span class="visually-hidden">Поиск</span></button>
       <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
         <label class="visually-hidden" for="searchfield">Поиск по сайту</label><input type="search" name="search" id="searchfield" placeholder="Что ищем?">
       </form>
@@ -38,19 +38,21 @@
         <a href="#">Забыли пароль?</a>
         <a href="#">Новая регистрация</a>
       </form>
-      <a class="user-block-btn cart-btn" href="#">2 товара</a>
-      <p><span class="time-of-work">С 10 до 20, ежедневно</span>
-      <br><span class="phone-number">8 812 450-25-25</span></p>
+      <a class="user-block-btn full-cart-btn" href="#">2 товара</a>
     </div>
   </header>
     <main>
-      <ul class="breadcrumbs">
-        <li class="breadcrumbs-item"><a href="index.html">Главная</a></li>
-        <li class="breadcrumbs-item"><a href="#">Каталог</a></li>
-        <li class="breadcrumbs-item breadcrumbs-item-current">Сливочное</li>
-      </ul>
+      <section class="breadcrumbs-and-info container">
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs-item"><a href="index.html">Главная</a></li>
+          <li class="breadcrumbs-item"><a href="#">Каталог</a></li>
+          <li class="breadcrumbs-item breadcrumbs-item-current">Сливочное</li>
+        </ul>
+        <p class="details-of-work"><span class="time-of-work">С 10 до 20, ежедневно</span>
+        <br><span class="phone-number">8 812 450-25-25</span></p>
+      </section>
       <h1 class="catalog-title">Сливочное мороженое</h1>
-      <section class="filters">
+      <section class="filters container">
         <h2 class="visually-hidden">Подбор мороженого на вкус и цвет</h2>
         <form class="filters-form" action="https://echo.htmlacademy.ru" method="post">
           <label for="sorting">Сортировка:</label>
@@ -176,9 +178,9 @@
         </section>
       </section>
     </main>
-    <footer>
+    <footer class="main-footer container">
       <div class="social">
-        <ul>
+        <ul class="social-list">
           <li>
             <a class="social-btn social-btn-twitter" href="https://twitter.com/">
               <svg class="social-pic" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px"
@@ -251,16 +253,24 @@
         </ul>
       </div>
       <div class="footer-info">
-        <ul>
-          <li class="footer-info-item provider-item"><a href="#">Для поставщиков</a></li>
-          <li class="footer-info-item"><a href="#">О производстве</a></li>
-          <li class="footer-info-item"><a href="#">Наши документы</a></li>
-          <li class="footer-info-item"><a href="#">Экологические стандарты</a></li>
+        <ul class="footer-info-list">
+          <li class="info-list-column info-column-1">
+            <ul>
+              <li class="footer-info-item provider-item"><a href="#">Для поставщиков</a></li>
+              <li class="footer-info-item"><a href="#">О производстве</a></li>
+            </ul>
+          </li>
+          <li class="info-list-column info-column-2">
+            <ul>
+              <li class="footer-info-item"><a href="#">Наши документы</a></li>
+              <li class="footer-info-item"><a href="#">Экологические стандарты</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
       <p class="copyright">
-        <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="125" height="39" alt="HTML Academy"></a>
-        <br><a class="make-in-htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss">Сделано в HTML Academy © 2019</a>
+        <a class="htmlacademy-logo" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="125" height="39" alt="HTML Academy"></a>
+        <a class="make-in-htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss">Сделано в HTML Academy © 2019</a>
       </p>
     </footer>
   </body>
