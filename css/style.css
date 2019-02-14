@@ -17,7 +17,6 @@ body {
   background-image: url("../img/icecream-green.png");
   background-repeat: no-repeat;
   background-position: top;
-  outline: 1px solid blue;
 }
 
 .visually-hidden {
@@ -58,8 +57,6 @@ a:focus {
   justify-content: flex-start;
   align-items: flex-start;
   width: 750px;
-
-  outline: 2px dotted pink;
 }
 
 .logo {
@@ -77,8 +74,6 @@ a:focus {
   width: 680px;
   padding-left: 0;
   margin-top: 27px;
-
-  outline: 2px dotted black;
 }
 
 .main-menu li {
@@ -138,8 +133,6 @@ a:focus {
   display: flex;
   justify-content: flex-end;
   width: 293px;
-
-  outline: 2px dotted yellow;
 }
 
 .user-block-btn {
@@ -199,8 +192,6 @@ a:focus {
   min-height: 533px;
   padding-top: 0;
   margin-bottom: 41px;
-
-  outline: 2px dotted red;
 }
 
 .details-of-work {
@@ -227,8 +218,6 @@ a:focus {
   padding: 0;
   margin-top: 0;
   margin-bottom: 0;
-
-  outline: 1px solid blue;
 }
 
 .breadcrumbs-item,
@@ -257,36 +246,50 @@ a:focus {
 
 .filters {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  min-height: 145px;
-
-  outline: 2px dotted black;
+  min-height: 153px;
+  margin-bottom: 40px;
 }
 
 .pricerange-title,
 .filters-form label,
 .filters-form legend {
-  font-se-height: 16px;
+  font-size: 16px;
   font-weight: 500;
   color: #ffffff;
 }
 
+.pricerange-title {
+  margin: 0;
+}
+
 .filters-form {
   display: flex;
-  justify-content: flex-start;
-  width: 880px;
+  flex-wrap: wrap;
 }
 
 .filters-form fieldset {
   border: 0;
 }
 
+.sorting {
+  display: flex;
+  width: 200px;
+  min-height: 55px;
+}
+
+.pricerange {
+  display: flex;
+  width: 220px;
+  min-height: 55px;
+}
+
 .pricerange-filter {
   width: 196px;
+  height: 37px;
   padding-top: 16px;
   padding-bottom: 17px;
   padding-left: 22px;
+  box-sizing: border-box;
 
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 15px;
@@ -308,11 +311,29 @@ a:focus {
 } */
 
 .fatness {
-  width: 415px;
+  width: 345px;
 }
 
 .type {
-  width: 703px;
+  width: 553px;
+}
+
+.fatness-sorting {
+  display: flex;
+  min-height: 37px;
+  padding: 0;
+  margin: 0;
+}
+
+.fatness-sorting-item {
+  margin-right: 12px;
+}
+
+.type-sorting {
+  display: flex;
+  min-height: 37px;
+  padding: 0;
+  margin: 0;
 }
 
 .fatness-sorting,
@@ -334,6 +355,7 @@ a:focus {
 
 .sorting-select {
   width: 195px;
+  height: 37px;
 
   color: #ffffff;
 
@@ -354,6 +376,7 @@ a:focus {
 
 .filter-btn {
   width: 140px;
+  height: 37px;
 
   font-size: 16px;
   line-height: 18px;
@@ -377,6 +400,10 @@ a:focus {
   box-shadow: inset 0 2px 0 1px #696969;
 }
 
+.catalog {
+  margin-bottom: 33px;
+}
+
 .catalog-title {
   width: 1146px;
   padding: 0;
@@ -386,11 +413,14 @@ a:focus {
   line-height: 41px;
   font-weight: 700;
   color: #ffffff;
-
-  outline: 2px dotted pink;
 }
 
-.catalog ul {
+.catalog-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0;
+
   list-style: none;
 }
 
@@ -478,8 +508,6 @@ a:focus {
   justify-content: center;
   min-height: 229px;
   margin-bottom: 40px;
-
-  outline: 2px dotted orange;
 }
 
 .bonus-list {
@@ -531,8 +559,6 @@ a:focus {
   min-height: 326px;
   padding: 0;
   margin-bottom: 36px;
-
-  outline: 1px solid blue;
 }
 
 .mini-catalog-list {
@@ -551,6 +577,7 @@ a:focus {
   width: 267px;
   padding: 0;
   margin: 0;
+  margin-bottom: 38px;
 }
 
 .catalog-item p {
@@ -563,6 +590,7 @@ a:focus {
   line-height: 45px;
   font-weight: 700;
   color: #ffffff;
+  text-align: center;
 }
 
 .price-sub {
@@ -576,6 +604,22 @@ a:focus {
   font-weight: 500;
   text-align: center;
   color: #ffffff;
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  min-height: 30px;
+}
+
+.pagination-list {
+  display: flex;
+  justify-content: space-between;
+  min-height: 35px;
+  width: 180px;
+  padding: 0;
+
+  list-style: none;
 }
 
 .pagination-item a {
@@ -627,8 +671,8 @@ a:focus {
   color: #323232;
 }
 
-.icon-right,
-.icon-left {
+.arrow-right,
+.arrow-left {
   display: block;
   width: 8px;
   height: 12px;
@@ -638,7 +682,7 @@ a:focus {
   opacity: 1;
 }
 
-.icon-left {
+.arrow-left {
   opacity: 0.2;
 
   transform: rotate(180deg);
@@ -786,9 +830,6 @@ a:focus {
   background-position: center;
 }
 
-tion: center;
-}
-
 .contacts {
   align-self: center;
   width: 302px;
@@ -817,18 +858,13 @@ tion: center;
 .main-footer {
   display: flex;
   justify-content: space-between;
-
   min-height: 103px;
-
-  outline: 2px dotted brown;
 }
 
 .social {
   display: flex;
   justify-content: flex-start;
   width: 267px;
-
-  outline: 2px dotted white;
 }
 
 .social-list {
@@ -840,7 +876,6 @@ tion: center;
   padding-top: 20px;
 
   list-style: none;
-  outline: 2px dotted yellow;
 }
 
 .social-btn {
@@ -877,8 +912,6 @@ tion: center;
   width: 450px;
   margin: 0;
   padding: 0;
-
-  outline: 2px dotted pink;
 }
 
 .footer-info-list {
@@ -891,7 +924,6 @@ tion: center;
   margin-left: 10px;
 
   list-style: none;
-  outline: 1px solid cyan;
 }
 
 .info-list-column ul {
@@ -922,8 +954,6 @@ tion: center;
   padding: 0;
   margin: 0;
   margin-top: 18px;
-
-  outline: 2px dotted cyan;
 }
 
 .htmlacademy-logo {
@@ -943,8 +973,4 @@ tion: center;
 .login-form,
 .modal-feedback {
   display: none;
-}
-  display: none;
-}
-splay: none;
 }
