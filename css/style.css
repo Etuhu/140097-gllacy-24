@@ -19,12 +19,30 @@ body {
   background-position: top;
 }
 
-.visually-hidden {
+/* .visually-hidden {
   position: absolute;
   clip: rect(0, 0, 0, 0);
   width: 1px;
   height: 1px;
   margin: -1px;
+} */
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .container {
@@ -818,8 +836,7 @@ a:focus {
 }
 
 .map {
-  display: flex;
-  justify-content: flex-end;
+  position: relative;
   width: 1200px;
   height: 429px;
   margin: 0 auto;
@@ -831,10 +848,11 @@ a:focus {
 }
 
 .contacts {
-  align-self: center;
+  position: relative;
+  top: 63px;
+  left: 871px;
   width: 302px;
   min-height: 305px;
-  margin-right: 27px;
   padding-left: 25px;
   padding-top: 14px;
   padding-right: 55px;
