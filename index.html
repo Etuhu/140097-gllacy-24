@@ -12,8 +12,8 @@
       <nav class="main-header-navigation">
         <img class="logo" src="img/logo.svg" width="154" height="64" alt="Логотип магазина Глэйси">
         <ul class="main-menu">
-          <li><a href="#">Каталог</a>
-            <ul class="sub-menu visually-hidden">
+          <li class="main-menu-catalog"><a href="#">Каталог</a>
+            <ul class="sub-menu">
               <li class="sub-menu-item sub-menu-item-new"><a href="#">Новинки</a></li>
               <li class="sub-menu-item"><a href="catalog.html">Сливочное</a></li>
               <li class="sub-menu-item"><a href="#">Щербеты</a></li>
@@ -26,18 +26,25 @@
         </ul>
       </nav>
       <div class="user-block">
-        <button class="user-block-btn search-btn" type="button"><span class="visually-hidden">Поиск</span></button>
-        <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
-          <label class="visually-hidden" for="searchfield">Поиск по сайту</label><input type="search" name="search" id="searchfield" placeholder="Что ищем?">
-        </form>
+        <button class="user-block-btn search-btn" type="button"><span class="visually-hidden">Поиск</span>
+          <div class="search-form-container">
+            <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+              <label class="visually-hidden" for="searchfield">Поиск по сайту</label><input type="search" name="search" id="searchfield" value="Что ищем?">
+            </form>
+          </div>
+        </button>
         <a class="user-block-btn login-btn" href="#">Вход</a>
-        <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-          <label class="visually-hidden" for="loginfield">Укажите электронную почту для входа в личный кабинет</label><input type="email" name="email" id="loginfield" placeholder="Электронная почта">
-          <label class="visually-hidden" for="passwordfield">Укажите пароль от личного кабинета</label><input type="password" name="password" id="passwordfield" placeholder="Пароль">
-          <button type="submit">Войти</button>
-          <a href="#">Забыли пароль?</a>
-          <a href="#">Новая регистрация</a>
-        </form>
+        <div class="login-form-container">
+          <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+            <label class="visually-hidden" for="loginfield">Укажите электронную почту для входа в личный кабинет</label><input type="email" name="email" id="loginfield" value="Электронная почта">
+            <label class="visually-hidden" for="passwordfield">Укажите пароль от личного кабинета</label><input type="text" name="password" id="passwordfield" value="Пароль">
+            <button class="btn login-form-btn" type="submit">Войти</button>
+            <p class="login-form-links">
+              <a class="password-recovery-link" href="#">Забыли пароль?</a>
+              <a class="registration-link" href="#">Новая регистрация</a>
+            </p>
+          </form>
+        </div>
         <a class="user-block-btn cart-btn" href="#">Пусто</a>
       </div>
     </header>
@@ -228,13 +235,13 @@
         <a class="make-in-htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss">Сделано в HTML Academy © 2019</a>
       </p>
     </footer>
-    <section class="modal modal-feedback">
+    <section class="modal-feedback">
       <h2>Мы обязательно вам ответим!</h2>
-      <form action="https://echo.htmlacademy.ru" method="post">
+      <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
         <label class="visually-hidden" for="feedback-username">Укажите своё имя</label><input type="text" name="feedback-username" id="feedback-username" placeholder="Как вас зовут?">
         <label class="visually-hidden" for="feedback-email">Укажите свою почту</label><input type="text" name="feedback-email" id="feedback-email" placeholder="Ваша почта для ответа?">
         <label class="visually-hidden" for="feedback-text">Укажите текст вашего отзыва</label><textarea name="feedback-text" id="feedback-text" placeholder="Напишите что-нибудь..." cols="40" rows="6"></textarea>
-        <button type="submit">Отправить</button>
+        <button class="feedback-form-btn" type="submit">Отправить</button>
         <button class="modal-close" type="button" aria-label="Закрыть окно обратной связи">x</button>
       </form>
     </section>
