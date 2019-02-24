@@ -26,22 +26,21 @@
         </ul>
       </nav>
       <div class="user-block">
-        <button class="user-block-btn search-btn" type="button"><span class="visually-hidden">Поиск</span>
-          <div class="search-form-container">
-            <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
-              <label class="visually-hidden" for="searchfield">Поиск по сайту</label><input type="search" name="search" id="searchfield" value="Что ищем?">
-            </form>
-          </div>
-        </button>
+        <button class="user-block-btn search-btn" type="button"><span class="visually-hidden">Поиск</span></button>
+        <div class="search-form-container">
+          <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+            <label class="visually-hidden" for="searchfield">Поиск по сайту</label><input type="search" name="search" id="searchfield" placeholder="Что ищем?">
+          </form>
+        </div>
         <a class="user-block-btn login-btn" href="#">Вход</a>
         <div class="login-form-container">
           <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-            <label class="visually-hidden" for="loginfield">Укажите электронную почту для входа в личный кабинет</label><input type="email" name="email" id="loginfield" value="Электронная почта">
-            <label class="visually-hidden" for="passwordfield">Укажите пароль от личного кабинета</label><input type="text" name="password" id="passwordfield" value="Пароль">
+            <label class="visually-hidden" for="loginfield">Укажите электронную почту для входа в личный кабинет</label><input type="email" name="email" id="loginfield" placeholder="Электронная почта">
+            <label class="visually-hidden" for="passwordfield">Укажите пароль от личного кабинета</label><input type="text" name="password" id="passwordfield" placeholder="Пароль">
             <button class="btn login-form-btn" type="submit">Войти</button>
             <p class="login-form-links">
-              <a class="password-recovery-link" href="#">Забыли пароль?</a>
-              <a class="registration-link" href="#">Новая регистрация</a>
+              <a class="whitespace-link password-recovery-link" href="#">Забыли пароль?</a>
+              <a class="whitespace-link registration-link" href="#">Новая регистрация</a>
             </p>
           </form>
         </div>
@@ -98,31 +97,32 @@
       <section class="advantages container">
         <h1>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h1>
         <ul class="advantages-list">
-          <li class="advantages-list-column advantages-column-left">
-            <ul>
-              <li class="advantages-item item-technology">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
-              <li class="advantages-item item-nature">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
-            </ul>
+          <li class="advantages-item item-technology">
+            Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.
           </li>
-          <li class="advantages-list-column advantages-column-right">
-            <ul>
-              <li class="advantages-item item-farm">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
-              <li class="advantages-item">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
-            </ul>
+          <li class="advantages-item item-farm">
+            Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
+          </li>
+          <li class="advantages-item item-nature">
+            Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.
+          </li>
+          <li class="advantages-item item-temperature">
+            Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
           </li>
         </ul>
       </section>
       <section class="news-and-subscribe container">
         <article class="new-in-blog">
           <h2>Новое в нашем блоге</h2>
-          <a href="#">10 способов сервировки фруктовых щербетов к столу</a>
+          <a class="whitespace-link" href="#">10 способов сервировки фруктовых щербетов к столу</a>
         </article>
         <section class="subscribe">
           <h2 class="visually-hidden">Подписаться на рассылку от GllacyShop</h2>
           <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
           <form action="https://echo.htmlacademy.ru" method="post">
-            <label class="visually-hidden" for="subscribefield">Укажите вашу электронную почту</label><input type="email" name="email" id="subscribefield" placeholder="Электронная почта">
-            <button class="btn" type="submit">Отправить</button>
+            <label class="visually-hidden" for="subscribefield">Укажите вашу электронную почту</label>
+            <input type="email" name="email" id="subscribefield" placeholder="Электронная почта">
+            <button class="btn subscribe-btn" type="submit">Отправить</button>
           </form>
         </section>
       </section>
@@ -216,22 +216,14 @@
       </div>
       <div class="footer-info">
         <ul class="footer-info-list">
-          <li class="info-list-column info-column-1">
-            <ul>
-              <li class="footer-info-item provider-item"><a href="#">Для поставщиков</a></li>
-              <li class="footer-info-item"><a href="#">О производстве</a></li>
-            </ul>
-          </li>
-          <li class="info-list-column info-column-2">
-            <ul>
-              <li class="footer-info-item"><a href="#">Наши документы</a></li>
-              <li class="footer-info-item"><a href="#">Экологические стандарты</a></li>
-            </ul>
-          </li>
+          <li class="footer-info-item provider-item"><a href="#">Для поставщиков</a></li>
+          <li class="footer-info-item"><a href="#">Наши документы</a></li>
+          <li class="footer-info-item"><a href="#">О производстве</a></li>
+          <li class="footer-info-item"><a href="#">Экологические стандарты</a></li>
         </ul>
       </div>
       <p class="copyright">
-        <a class="htmlacademy-logo" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="125" height="39" alt="HTML Academy"></a>
+        <a class="htmlacademy-logo" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="108" height="37" alt="HTML Academy"></a>
         <a class="make-in-htmlacademy" href="https://htmlacademy.ru/intensive/htmlcss">Сделано в HTML Academy © 2019</a>
       </p>
     </footer>
@@ -240,9 +232,9 @@
       <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
         <label class="visually-hidden" for="feedback-username">Укажите своё имя</label><input type="text" name="feedback-username" id="feedback-username" placeholder="Как вас зовут?">
         <label class="visually-hidden" for="feedback-email">Укажите свою почту</label><input type="text" name="feedback-email" id="feedback-email" placeholder="Ваша почта для ответа?">
-        <label class="visually-hidden" for="feedback-text">Укажите текст вашего отзыва</label><textarea name="feedback-text" id="feedback-text" placeholder="Напишите что-нибудь..." cols="40" rows="6"></textarea>
-        <button class="feedback-form-btn" type="submit">Отправить</button>
-        <button class="modal-close" type="button" aria-label="Закрыть окно обратной связи">x</button>
+        <label class="visually-hidden" for="feedback-text">Укажите текст вашего отзыва</label><textarea name="feedback-text" id="feedback-text" cols="40" rows="5" placeholder="Напишите что-нибудь..."></textarea>
+        <button class="btn feedback-form-btn" type="submit">Отправить</button>
+        <button class="feedback-form-close" type="button" aria-label="Закрыть окно обратной связи"></button>
       </form>
     </section>
   </body>
