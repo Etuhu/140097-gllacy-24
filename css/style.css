@@ -118,8 +118,6 @@ a:active {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-
-  outline: 1px solid black;
 }
 
 .main-header-navigation {
@@ -127,11 +125,13 @@ a:active {
   justify-content: flex-start;
   align-items: flex-start;
   width: 750px;
+  margin: 0;
 }
 
 .logo {
   width: 154px;
   height: 64px;
+  margin: 0;
   margin-top: 9px;
   margin-right: 10px;
 }
@@ -323,6 +323,7 @@ ul.sub-menu {
   flex-wrap: wrap;
   width: 293px;
   padding-top: 23px;
+  margin: 0;
 }
 
 .user-block-btn {
@@ -612,6 +613,92 @@ ul.sub-menu {
   background-position: 17% 48%;
 }
 
+.cart-content {
+  position: absolute;
+  top: 59px;
+  right: 0;
+
+  display: block;
+  width: 540px;
+  padding-top: 20px;
+  padding-left: 16px;
+  padding-right: 15px;
+  padding-bottom: 22px;
+  box-sizing: border-box;
+
+  background-color: #f8f7f4;
+  border-radius: 5px;
+  box-shadow: 0px 20px 30px 0 rgba(0, 0, 0, 0.4);
+}
+
+.cart-content-table {
+  padding: 0;
+  margin: 0;
+  border-spacing: 20px;
+  border-collapse: collapse;
+
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.cart-content-table tr {
+  padding: 0;
+  margin: 0;
+  border-spacing: 0px;
+  border-collapse: collapse;
+  outline: 1px dotted cyan;
+}
+
+.cart-content-table td {
+  padding: 0 auto;
+  padding-right: 10px;
+  margin: 0;
+  border-spacing: 0px;
+  outline: 1px dotted red;
+}
+
+.cart-content-table caption {
+  caption-side: bottom;
+  font-size: 15px;
+  font-weight: 700;
+  color: #323232;
+  text-align: right;
+}
+
+.cart-content-image {
+  width: 33px;
+  height: 33px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+ /* .delete-content {
+   margin: 0;
+   padding: 0;
+ } */
+
+ .delete-content {
+   width: 15px;
+   height: 15px;
+
+   background-color: transparent;
+   background-image: url("../img/cross-small.svg");
+   background-repeat: no-repeat;
+   background-position: center;
+   border: 0;
+ }
+
+
+.citrus-icecream-mini {
+  background-image: url("../img/citrus-icecream.png");
+}
+
+.strawberry-icecream-mini {
+  background-image: url("../img/strawberry-icecream.png");
+}
+
+
 .promo {
   display: flex;
   flex-direction: column;
@@ -621,21 +708,26 @@ ul.sub-menu {
 }
 
 .details-of-work {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 180px;
   margin: 0;
   padding: 0;
 
   text-align: right;
-
-  outline: 2px dotted yellow;
+  vertical-align: top;
 }
 
 .time-of-work {
   display: inline-block;
   margin: 0;
+  margin-bottom: 7px;
   padding: 0;
 
   font-size: 14px;
-  line-height: 16px;
+  line-height: 9px;
   font-weight: 700;
   color: #ffffff;
 }
@@ -649,6 +741,10 @@ ul.sub-menu {
   line-height: 24px;
   font-weight: 700;
   color: #ffffff;
+}
+
+.promo .details-of-work {
+  align-self: flex-end;
 }
 
 .promo-title {
@@ -673,7 +769,7 @@ ul.sub-menu {
   align-items: flex-start;
   padding: 0;
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 2px;
 }
 
 .breadcrumbs {
@@ -712,7 +808,7 @@ ul.sub-menu {
 
 .filters {
   display: flex;
-  min-height: 153px;
+  height: 158px;
   margin-bottom: 40px;
 }
 
@@ -867,7 +963,8 @@ ul.sub-menu {
 }
 
 .catalog {
-  margin-bottom: 33px;
+  padding: 0;
+  margin-bottom: 47px;
 }
 
 .catalog-title {
@@ -886,6 +983,7 @@ ul.sub-menu {
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 0;
+  margin: 0;
 
   list-style: none;
 }
@@ -1000,20 +1098,28 @@ ul.sub-menu {
   width: 267px;
   padding: 0;
   margin: 0;
-  margin-bottom: 39px;
+  margin-bottom: 38px;
 }
 
 .catalog-item p {
   margin: 0;
   position: absolute;
   top: 209px;
-  left: 0;
+  left: -2px;
 
   font-size: 45px;
   line-height: 45px;
   font-weight: 700;
   color: #ffffff;
+  text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
   text-align: center;
+}
+
+.catalog-item-price {
+  display: inline-block;
+  margin: 0;
+  margin-right: 4px;
+  padding: 0;
 }
 
 .price-sub {
@@ -1021,25 +1127,36 @@ ul.sub-menu {
 }
 
 .catalog-item h3 {
+  padding: 0;
   margin: 0;
-  margin-top: 7px;
+  margin-top: 8px;
 
+  font-size: 16px;
+  line-height: 22px;
   font-weight: 500;
   text-align: center;
   color: #ffffff;
 }
 
+h3.slim-title {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
 .pagination {
   display: flex;
   justify-content: flex-end;
-  min-height: 30px;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 16px;
 }
 
 .pagination-list {
   display: flex;
   justify-content: space-between;
-  min-height: 35px;
-  width: 180px;
+  height: 35px;
+  width: 190px;
+  margin: 0;
   padding: 0;
 
   list-style: none;
@@ -1389,6 +1506,14 @@ ul.sub-menu {
   font-size: 18px;
   line-height: 24px;
   font-weight: 700;
+}
+
+hr.main-border-line {
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 0;
+
+  opacity: 0.3;
 }
 
 .main-footer {
