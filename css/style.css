@@ -613,17 +613,22 @@ ul.sub-menu {
   background-position: 17% 48%;
 }
 
+.full-cart-btn:hover ~ .cart-content,
+.full-cart-btn:focus ~ .cart-content {
+  display: block;
+}
+
 .cart-content {
   position: absolute;
   top: 59px;
   right: 0;
 
-  display: block;
+  display: none;
   width: 540px;
-  padding-top: 20px;
-  padding-left: 16px;
+  padding-top: 18px;
+  padding-left: 14px;
   padding-right: 15px;
-  padding-bottom: 22px;
+  padding-bottom: 21px;
   box-sizing: border-box;
 
   background-color: #f8f7f4;
@@ -632,72 +637,124 @@ ul.sub-menu {
 }
 
 .cart-content-table {
-  padding: 0;
-  margin: 0;
-  border-spacing: 20px;
-  border-collapse: collapse;
+  width: 510px;
 
   font-size: 13px;
   line-height: 16px;
   font-weight: 400;
+
+  border-bottom: 1px solid #cacac7;
 }
 
-.cart-content-table tr {
+.cart-content-position:nth-child(2) .cart-content-item {
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
+.cart-content-item {
   padding: 0;
+  padding-bottom: 25px;
   margin: 0;
-  border-spacing: 0px;
-  border-collapse: collapse;
-  outline: 1px dotted cyan;
-}
 
-.cart-content-table td {
-  padding: 0 auto;
-  padding-right: 10px;
-  margin: 0;
-  border-spacing: 0px;
-  outline: 1px dotted red;
+  text-align: left;
+  vertical-align: top;
 }
 
 .cart-content-table caption {
   caption-side: bottom;
+  width: 120px;
+  margin: 0;
+  margin-left: 393px;
+  margin-bottom: 15px;
+  padding: 0;
+  padding-top: 15px;
+
   font-size: 15px;
   font-weight: 700;
   color: #323232;
   text-align: right;
 }
 
-.cart-content-image {
-  width: 33px;
-  height: 33px;
-  background-repeat: no-repeat;
-  background-size: contain;
+.close-position-item {
+  width: 11px;
+  margin: 0;
+  padding: 0;
+  padding-top: 8px;
 }
 
- /* .delete-content {
-   margin: 0;
-   padding: 0;
- } */
+.cart-content-position:nth-child(2) .close-position-item {
+  padding-top: 11px;
+}
 
  .delete-content {
-   width: 15px;
-   height: 15px;
+   padding: 0;
+   margin: 0;
+   width: 11px;
+   height: 11px;
 
    background-color: transparent;
    background-image: url("../img/cross-small.svg");
    background-repeat: no-repeat;
    background-position: center;
    border: 0;
+
+   cursor: pointer;
  }
 
+.cart-content-image {
+  width: 56px;
+
+  background-repeat: no-repeat;
+  background-position: 13px 0;
+}
 
 .citrus-icecream-mini {
   background-image: url("../img/citrus-icecream.png");
+  background-size: 33px;
 }
 
 .strawberry-icecream-mini {
   background-image: url("../img/strawberry-icecream.png");
+  background-size: 33px;
+  background-position: 14px 2px;
 }
 
+.name-position-item {
+  width: 230px;
+  padding-top: 8px;
+  padding-left: 1px;
+}
+
+.weight-position-item {
+  width: 119px;
+  padding-top: 8px;
+  padding-left: 15px;
+}
+
+.weight-position-item span {
+  color: #999999;
+}
+
+.price-position-item {
+  padding-top: 8px;
+  padding-left: 2px;
+}
+
+.cart-content-btn {
+  float: right;
+
+  box-sizing: border-box;
+  padding-top: 9px;
+  padding-bottom: 11px;
+  padding-left: 14px;
+  padding-right: 14px;
+
+  color: #fefefe;
+
+  box-shadow: 0px 1px 2px 0 #ac1000;
+  background-image: linear-gradient(to top, #e74a35, #f26843);
+  border-radius: 20px;
+}
 
 .promo {
   display: flex;
@@ -1148,7 +1205,7 @@ h3.slim-title {
   justify-content: flex-end;
   padding: 0;
   margin-top: 0;
-  margin-bottom: 16px;
+  margin-bottom: 15px;
 }
 
 .pagination-list {
@@ -1513,6 +1570,10 @@ hr.main-border-line {
   margin-top: 0;
   padding: 0;
 
+  width: 1146px;
+  border-width: 1px;
+  color: #ffffff;
+
   opacity: 0.3;
 }
 
@@ -1520,6 +1581,10 @@ hr.main-border-line {
   display: flex;
   justify-content: space-between;
   min-height: 103px;
+}
+
+.catalog-footer .social-list {
+  padding-left: 0;
 }
 
 .social {
@@ -1584,6 +1649,10 @@ hr.main-border-line {
   margin-left: 5px;
 
   list-style: none;
+}
+
+.catalog-footer .footer-info-list {
+  margin-top: 29px;
 }
 
 .footer-info-item {
