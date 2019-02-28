@@ -14,7 +14,7 @@
         <ul class="main-menu">
           <li class="main-menu-catalog"><a href="#">Каталог</a>
             <ul class="sub-menu">
-              <li class="sub-menu-item sub-menu-item-new"><a href="#">Новинки</a></li>
+              <li class="sub-menu-item sub-menu-item-new" ><a href="#">Новинки</a></li>
               <li class="sub-menu-item"><a href="catalog.html">Сливочное</a></li>
               <li class="sub-menu-item"><a href="#">Щербеты</a></li>
               <li class="sub-menu-item"><a href="#">Фруктовый лед</a></li>
@@ -27,23 +27,27 @@
       </nav>
       <div class="user-block">
         <button class="user-block-btn search-btn" type="button"><span class="visually-hidden">Поиск</span></button>
-        <div class="search-form-container">
-          <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
-            <label class="visually-hidden" for="searchfield">Поиск по сайту</label><input type="search" name="search" id="searchfield" placeholder="Что ищем?">
-          </form>
+        <div class="search-form-wrapper">
+          <div class="search-form-container">
+            <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+              <label class="visually-hidden" for="searchfield">Поиск по сайту</label><input type="search" name="search" id="searchfield" placeholder="Что ищем?">
+            </form>
+          </div>
         </div>
         <a class="user-block-btn login-btn" href="#">Вход</a>
-        <div class="login-form-container">
-          <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-            <label class="visually-hidden" for="loginfield">Укажите электронную почту для входа в личный кабинет</label><input type="email" name="email" id="loginfield" placeholder="Электронная почта">
-            <label class="visually-hidden" for="passwordfield">Укажите пароль от личного кабинета</label><input type="text" name="password" id="passwordfield" placeholder="Пароль">
-            <button class="btn login-form-btn" type="submit">Войти</button>
-            <p class="login-form-links">
-              <a class="whitespace-link password-recovery-link" href="#">Забыли пароль?</a>
-              <a class="whitespace-link registration-link" href="#">Новая регистрация</a>
-            </p>
-          </form>
-        </div>
+          <div class="login-form-wrapper">
+            <div class="login-form-container">
+              <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+                <label class="visually-hidden" for="loginfield">Укажите электронную почту для входа в личный кабинет</label><input type="email" name="email" id="loginfield" placeholder="Электронная почта">
+                <label class="visually-hidden" for="passwordfield">Укажите пароль от личного кабинета</label><input type="text" name="password" id="passwordfield" placeholder="Пароль">
+                <button class="btn login-form-btn" type="submit">Войти</button>
+                <p class="login-form-links">
+                  <a class="whitespace-link password-recovery-link" href="#">Забыли пароль?</a>
+                  <a class="whitespace-link registration-link" href="#">Новая регистрация</a>
+                </p>
+              </form>
+            </div>
+          </div>
         <a class="user-block-btn cart-btn" href="#">Пусто</a>
       </div>
     </header>
@@ -76,22 +80,22 @@
         <ul class="mini-catalog-list">
           <li class="catalog-item">
             <img src="img/citrus-icecream.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-            <p><b><span class="catalog-item-price">310</span>₽<span class="price-sub">/кг</span></b></p>
+            <p><span class="catalog-item-price">310</span>₽<span class="price-sub">/кг</span></p>
             <h3><a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
           </li>
           <li class="catalog-item">
             <img src="img/coffee-icecream.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
-            <p><b><span class="catalog-item-price">380</span>₽<span class="price-sub">/кг</span></b></p>
+            <p><span class="catalog-item-price">380</span>₽<span class="price-sub">/кг</span></p>
             <h3><a href="#">Сливочно-кофейное с кусочками шоколада</a></h3>
           </li>
           <li class="catalog-item">
             <img src="img/strawberry-icecream.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
-            <p><b><span class="catalog-item-price">355</span>₽<span class="price-sub">/кг</span></b></p>
+            <p><span class="catalog-item-price">355</span>₽<span class="price-sub">/кг</span></p>
             <h3><a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
           </li>
           <li class="catalog-item">
             <img src="img/caramel-cream-icecream.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
-            <p><b><span class="catalog-item-price">415</span>₽<span class="price-sub">/кг</span></b></p>
+            <p><span class="catalog-item-price">415</span>₽<span class="price-sub">/кг</span></p>
             <h3><a href="#">Сливочное крем-брюле с карамельной подливкой</a></h3>
           </li>
         </ul>
