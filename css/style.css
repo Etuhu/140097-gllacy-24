@@ -610,7 +610,9 @@ ul.sub-menu {
 }
 
 .login-form-wrapper:hover,
-.login-form-wrapper:focus {
+.login-form-wrapper:focus,
+.login-form:hover,
+.login-form:focus {
   display: block;
 }
 
@@ -643,17 +645,27 @@ ul.sub-menu {
   background-position: 17% 48%;
 }
 
-.full-cart-btn:hover ~ .cart-content,
-.full-cart-btn:focus ~ .cart-content {
+.full-cart-btn:hover ~ .cart-content-wrapper,
+.full-cart-btn:focus ~ .cart-content-wrapper,
+.cart-content-wrapper:hover,
+.cart-content-wrapper:focus-within {
   display: block;
 }
 
-.cart-content {
+.cart-content-wrapper {
   position: absolute;
-  top: 59px;
+  top: 39px;
   right: 0;
 
   display: none;
+  padding-top: 20px;
+}
+
+.cart-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
   width: 540px;
   padding-top: 18px;
   padding-left: 14px;
@@ -664,6 +676,11 @@ ul.sub-menu {
   background-color: #f8f7f4;
   border-radius: 5px;
   box-shadow: 0px 20px 30px 0 rgba(0, 0, 0, 0.4);
+}
+
+.cart-content:hover,
+.cart-content:focus-within {
+  display: flex;
 }
 
 .cart-content-table {
@@ -716,19 +733,19 @@ ul.sub-menu {
   padding-top: 11px;
 }
 
- .delete-content {
-   padding: 0;
-   margin: 0;
-   width: 11px;
-   height: 11px;
+.delete-content {
+  padding: 0;
+  margin: 0;
+  width: 11px;
+  height: 11px;
 
-   background-color: transparent;
-   background-image: url("../img/cross-small.svg");
-   background-repeat: no-repeat;
-   background-position: center;
-   border: 0;
+  background-color: transparent;
+  background-image: url("../img/cross-small.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 0;
 
-   cursor: pointer;
+  cursor: pointer;
  }
 
 .cart-content-image {
@@ -771,7 +788,7 @@ ul.sub-menu {
 }
 
 .cart-content-btn {
-  float: right;
+  align-self: flex-end;
 
   box-sizing: border-box;
   padding-top: 9px;
@@ -856,7 +873,7 @@ ul.sub-menu {
   align-items: flex-start;
   padding: 0;
   margin-top: 0;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
 }
 
 .breadcrumbs {
@@ -864,7 +881,7 @@ ul.sub-menu {
   justify-content: flex-start;
   padding: 0;
   margin: 0;
-  margin-top: 21px;
+  margin-top: 23px;
 
   list-style: none;
 }
@@ -881,6 +898,13 @@ ul.sub-menu {
 
 .breadcrumbs-item a {
   margin-right: 7px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.breadcrumbs-item a:hover,
+.breadcrumbs-item a:focus,
+.breadcrumbs-item a:active {
+  box-shadow: 0 1px 0 #ffbc9e;
 }
 
 .breadcrumbs-quotes {
@@ -1182,10 +1206,32 @@ ul.sub-menu {
 
 .catalog-item {
   position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   width: 267px;
   padding: 0;
   margin: 0;
-  margin-bottom: 38px;
+  margin-bottom: 29px;
+
+  text-align: center;
+}
+
+.main-catalog-item::after {
+  content:"";
+  position: absolute;
+  top: -6px;
+
+  display: block;
+  width: 293px;
+  min-height: 405px;
+
+  border-radius: 5px;
+  opacity: 0;
+  box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+  background-color: #f8f7f4;
 }
 
 .catalog-item p {
@@ -1216,7 +1262,8 @@ ul.sub-menu {
 .catalog-item h3 {
   padding: 0;
   margin: 0;
-  margin-top: 8px;
+  margin-top: 13px;
+  margin-bottom: 9px;
 
   font-size: 16px;
   line-height: 22px;
@@ -1229,9 +1276,47 @@ ul.sub-menu {
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
+.catalog-item h3 a:hover,
+.catalog-item h3 a:focus,
+.catalog-item h3 a:active {
+  box-shadow: 0 1px 0 #ffbc9e;
+}
+
 h3.slim-title {
   padding-left: 30px;
   padding-right: 30px;
+}
+
+.catalog-item-btn {
+  position: absolute;
+  top: 333px;
+
+  display: none;
+  box-sizing: border-box;
+  padding-top: 9px;
+  padding-bottom: 10px;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  color: #fefefe;
+
+  box-shadow: 0px 1px 2px 0 #ac1000;
+  background-image: linear-gradient(to top, #e74a35, #f26843);
+  border-radius: 20px;
+}
+
+.main-catalog-item:hover .catalog-item-btn {
+  z-index: 1;
+  display: block;
+}
+
+.main-catalog-item:hover::after {
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.main-catalog-item:hover {
+  z-index: 1;
 }
 
 .pagination {
