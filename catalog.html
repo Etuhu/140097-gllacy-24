@@ -103,8 +103,8 @@
             <p class="pricerange-title">Цена: 100 руб. – 500 руб.</p>
             <div class="pricerange-filter">
               <div class="pricerange-filter-line">
-                <span class="pricerange-button pricerange-button-left"></span>
-                <span class="pricerange-button pricerange-button-right"></span>
+                <div class="pricerange-button pricerange-button-left"></div>
+                <div class="pricerange-button pricerange-button-right"></div>
               </div>
               <span class="visually-hidden">Фильтр по стоимости</span>
             </div>
@@ -112,14 +112,22 @@
           <fieldset class="fatness">
             <legend>Жирность:</legend>
             <ul class="fatness-sorting">
-              <li class="fatness-sorting-item"><input type="radio" name="fatness" id="0%" value="0%">
-              <label for="0%">0%</label></li>
-              <li class="fatness-sorting-item"><input type="radio" name="fatness" id="<10%" value="<10%" checked>
-              <label for="<10%">до 10%</label></li>
-              <li class="fatness-sorting-item"><input type="radio" name="fatness" id="<30%" value="<30%">
-              <label for="<30%">до 30%</label></li>
-              <li class="fatness-sorting-item"><input type="radio" name="fatness" id=">30%" value=">30%">
-              <label for=">30%">выше 30%</label></li>
+              <li class="fatness-sorting-item">
+                <input class="visually-hidden fatness-sorting-input" type="radio" name="fatness" id="0%" value="0%">
+                <label for="0%">0%</label>
+              </li>
+              <li class="fatness-sorting-item">
+                <input class="visually-hidden fatness-sorting-input" type="radio" name="fatness" id="<10%" value="<10%" checked>
+                <label for="<10%">до 10%</label>
+              </li>
+              <li class="fatness-sorting-item">
+                <input class="visually-hidden fatness-sorting-input" type="radio" name="fatness" id="<30%" value="<30%">
+                <label for="<30%">до 30%</label>
+              </li>
+              <li class="fatness-sorting-item">
+                <input class="visually-hidden fatness-sorting-input" type="radio" name="fatness" id=">30%" value=">30%">
+                <label for=">30%">выше 30%</label>
+              </li>
             </ul>
           </fieldset>
           <fieldset class="type">
