@@ -1007,7 +1007,7 @@ ul.sub-menu {
   display: flex;
   align-items: flex-start;
   height: 158px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .filters-form {
@@ -1309,11 +1309,104 @@ ul.sub-menu {
   margin: 0;
 }
 
+.type legend {
+  margin: 0;
+  margin-bottom: 6px;
+  padding: 0;
+  padding-top: 1px;
+  padding-left: 16px;
+}
+
+.type {
+  min-width: 702px;
+  min-height: 37px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .type-sorting {
   display: flex;
-  min-height: 37px;
-  padding: 0;
+  justify-content: flex-start;
+  align-items: flex-start;
   margin: 0;
+  padding: 0;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 48px;
+  border-radius: 20px;
+}
+
+.type-sorting-item {
+  margin-right: 54px;
+}
+
+.type-sorting-item:first-of-type {
+  margin-left: 0;
+  margin-right: 52px;
+}
+
+.type-sorting-item:nth-of-type(4) {
+  margin-right: 53px;
+}
+
+.type-sorting-item:last-of-type {
+  margin-right: 0;
+}
+
+.type-sorting-item label {
+  position: relative;
+
+  display: block;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.type-sorting-input + label::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -36px;
+
+  width: 23px;
+  height: 23px;
+
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.8;
+}
+
+.type-sorting-item:nth-of-type(1) .type-sorting-input + label::before,
+.type-sorting-item:nth-of-type(2) .type-sorting-input + label::before,
+.type-sorting-item:nth-of-type(4) .type-sorting-input + label::before,
+.type-sorting-item:nth-of-type(5) .type-sorting-input + label::before {
+  left: -34px;
+}
+
+.type-sorting-input:checked + label::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -36px;
+
+  width: 27px;
+  height: 23px;
+
+  background-image: url("../img/checkbox-on.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.8;
+}
+
+.type-sorting-input:checked + label:hover::before,
+.type-sorting-input:hover + label::before {
+  opacity: 1;
+}
+
+.type-sorting-input:disabled + label::before {
+  opacity: 0.4;
 }
 
 .fatness-sorting,
@@ -1323,8 +1416,15 @@ ul.sub-menu {
 }
 
 .filter-btn {
-  width: 140px;
-  height: 37px;
+  width: 144px;
+  height: 36px;
+  padding: 0;
+  padding-left: 28px;
+  padding-right: 28px;
+  margin: 0;
+  margin-top: 23px;
+  margin-left: 14px;
+  box-sizing: border-box;
 
   font-size: 16px;
   line-height: 18px;
@@ -1333,7 +1433,7 @@ ul.sub-menu {
 
   background-color: rgba(255, 255, 255, 0.2);
   border: 2px solid #ffffff;
-  border-radius: 15px;
+  border-radius: 20px;
 }
 
 .filter-btn:hover,
