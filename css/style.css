@@ -102,6 +102,7 @@ a:active {
   font-weight: 700;
   color: #ffffff;
   text-align: center;
+  vertical-align: middle;
   text-decoration: none;
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
 
@@ -446,7 +447,7 @@ ul.sub-menu {
   padding-left: 12px;
   padding-right: 12px;
   padding-top: 8px;
-  padding-bottom: 9px;
+  padding-bottom: 8px;
 
   border: 2px solid rgba(154, 154, 154, 0.52);
 }
@@ -606,6 +607,7 @@ ul.sub-menu {
   line-height: 14px;
   font-weight: 400;
   text-align: left;
+  vertical-align: middle;
 }
 
 .login-form-btn {
@@ -858,6 +860,7 @@ ul.sub-menu {
   font-size: 14px;
   line-height: 16px;
   font-weight: 700;
+  vertical-align: middle;
   color: #ffffff;
 }
 
@@ -869,6 +872,7 @@ ul.sub-menu {
   font-size: 22px;
   line-height: 24px;
   font-weight: 700;
+  vertical-align: middle;
   color: #ffffff;
 }
 
@@ -979,6 +983,7 @@ ul.sub-menu {
   font-size: 14px;
   line-height: 16px;
   font-weight: 400;
+  vertical-align: top;
   color: #ffffff;
 }
 
@@ -1468,7 +1473,7 @@ ul.sub-menu {
 
 .catalog-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
   padding: 0;
   margin: 0;
@@ -1519,6 +1524,7 @@ ul.sub-menu {
 
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   border-radius: 15px;
 }
 
@@ -1632,13 +1638,18 @@ ul.sub-menu {
   align-items: center;
   width: 267px;
   padding: 0;
+  padding-bottom: 38px;
   margin: 0;
-  margin-bottom: 29px;
+  margin-right: 26px;
 
   text-align: center;
 }
 
-.main-catalog-item::after {
+.catalog-item:nth-child(4n) {
+  margin-right: 0;
+}
+
+.catalog-item::after {
   content:"";
   position: absolute;
   top: -6px;
@@ -1669,10 +1680,11 @@ ul.sub-menu {
 }
 
 .catalog-item p {
-  margin: 0;
   position: absolute;
   top: 209px;
   left: -2px;
+
+  margin: 0;
 
   font-size: 45px;
   line-height: 45px;
@@ -1687,6 +1699,8 @@ ul.sub-menu {
   margin: 0;
   margin-right: 4px;
   padding: 0;
+
+  vertical-align: top;
 }
 
 .price-sub {
@@ -1694,10 +1708,11 @@ ul.sub-menu {
 }
 
 .catalog-item h3 {
+  position: relative;
+
   padding: 0;
   margin: 0;
   margin-top: 13px;
-  margin-bottom: 9px;
 
   font-size: 16px;
   line-height: 22px;
@@ -1723,12 +1738,12 @@ h3.slim-title {
 
 .catalog-item-btn {
   position: absolute;
-  top: 333px;
+  bottom: -15px;
 
   display: none;
   box-sizing: border-box;
   padding-top: 9px;
-  padding-bottom: 10px;
+  padding-bottom: 11px;
   padding-left: 16px;
   padding-right: 16px;
 
@@ -1739,17 +1754,19 @@ h3.slim-title {
   border-radius: 20px;
 }
 
-.main-catalog-item:hover .catalog-item-btn {
+.catalog-item:hover .catalog-item-btn {
   z-index: 1;
   display: block;
 }
 
-.main-catalog-item:hover::after {
+.catalog-item:hover::after {
   opacity: 0.2;
   z-index: -1;
+
+  height: 108%;
 }
 
-.main-catalog-item:hover {
+.catalog-item:hover {
   z-index: 1;
 }
 
@@ -1987,6 +2004,7 @@ h3.slim-title {
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
+  vertical-align: middle;
   text-decoration: underline;
 
   color: #323232;
@@ -2388,6 +2406,7 @@ hr.main-border-line {
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
+  vertical-align: middle;
   color: #fefefe;
 }
 
