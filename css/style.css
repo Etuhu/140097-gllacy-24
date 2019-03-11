@@ -181,7 +181,7 @@ a:active {
 }
 
 .main-menu > li {
-  padding-bottom: 5px;
+  padding-bottom: 7px;
 }
 
 .main-menu a {
@@ -220,6 +220,24 @@ a:active {
   height: 1px;
   margin-top: -1px;
   background-color: rgba(255, 255, 255, 0.2);
+}
+
+.main-menu-catalog a:hover ~ .sub-menu,
+.main-menu-catalog a:focus ~ .sub-menu {
+  display: block;
+}
+
+.sub-menu:hover,
+.sub-menu:focus {
+  display: block;
+}
+
+.main-menu-catalog:hover .sub-menu {
+  display: block;
+}
+
+.main-menu-catalog:focus-within .sub-menu {
+  display: block;
 }
 
 ul.sub-menu {
@@ -341,11 +359,6 @@ ul.sub-menu {
 
 .sub-menu-item-current a {
   background-color: #d07058;
-}
-
-.main-menu-catalog:hover ul.sub-menu,
-.main-menu-catalog:focus-within ul.sub-menu {
-  display: block;
 }
 
 .user-block {
@@ -477,7 +490,7 @@ ul.sub-menu {
 }
 
 .search-btn:hover ~ .search-form-wrapper,
-.search-btn:focus-within ~ .search-form-wrapper {
+.search-btn:focus ~ .search-form-wrapper {
   display: block;
 }
 
@@ -629,7 +642,7 @@ ul.sub-menu {
 }
 
 .login-btn:hover ~ .login-form-wrapper,
-.login-btn:focus-within ~ .login-form-wrapper {
+.login-btn:focus ~ .login-form-wrapper {
   display: block;
 }
 
@@ -672,7 +685,7 @@ ul.sub-menu {
 .full-cart-btn:hover ~ .cart-content-wrapper,
 .full-cart-btn:focus ~ .cart-content-wrapper,
 .cart-content-wrapper:hover,
-.cart-content-wrapper:focus-within {
+.cart-content-wrapper:focus {
   display: block;
 }
 
@@ -1065,10 +1078,10 @@ ul.sub-menu {
 .sorting-select {
   position: relative;
 
-  padding-top: 9px;
-  padding-bottom: 8px;
-  padding-left: 14px;
-  padding-right: 32px;
+  padding-top: 11px;
+  padding-bottom: 10px;
+  padding-left: 16px;
+  padding-right: 34px;
 
   color: #ffffff;
 
@@ -1077,6 +1090,7 @@ ul.sub-menu {
   background-repeat: no-repeat;
   background-position: 93% 50%;
   border-radius: 20px;
+  border: 0;
 
   -webkit-appearance: none;
     -moz-appearance: none;
@@ -1094,6 +1108,10 @@ ul.sub-menu {
   color: #323232;
 
   background-color: #ffffff;
+}
+
+.sorting-select::-ms-expand {
+	display: none;
 }
 
 .pricerange {
