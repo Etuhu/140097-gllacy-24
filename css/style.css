@@ -45,7 +45,8 @@ body {
   margin: -1px;
 } */
 
-.visually-hidden:not(:focus):not(:active),
+/* .visually-hidden:not(:focus):not(:active), */
+.visually-hidden,
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
   position: absolute;
@@ -148,16 +149,28 @@ a:active {
   margin: 0;
 }
 
-.main-header-navigation .logo-link {
-  height: 73px;
+.logo {
+  width: 154px;
+  height: 64px;
+  padding: 0;
+  margin: 0;
+  margin-top: 9px;
+  margin-right: 10px;
 }
 
-.logo {
+.logo-link {
+  display: flex;
   width: 154px;
   height: 64px;
   margin: 0;
   margin-top: 9px;
   margin-right: 10px;
+  padding: 0;
+}
+
+.logo-link .logo {
+  margin: 0;
+  padding: 0;
 }
 
 .main-menu,
@@ -422,7 +435,7 @@ ul.sub-menu {
   position: absolute;
   top: 39px;
   right: 213px;
-  z-index: 6;
+  z-index: 900;
 
   display: none;
   padding-top: 20px;
@@ -489,6 +502,11 @@ ul.sub-menu {
   color: #999999;
 }
 
+.search-form input[type="search"]:-ms-input-placeholder {
+  font-weight: 400;
+  color: #999999;
+}
+
 .search-btn:hover ~ .search-form-wrapper,
 .search-btn:focus ~ .search-form-wrapper {
   display: block;
@@ -496,6 +514,11 @@ ul.sub-menu {
 
 .search-form-wrapper:hover,
 .search-form-wrapper:focus {
+  display: block;
+}
+
+.search-form-container:hover,
+.search-form-container:focus {
   display: block;
 }
 
@@ -520,7 +543,7 @@ ul.sub-menu {
   position: absolute;
   top: 39px;
   right: 109px;
-  z-index: 6;
+  z-index: 900;
 
   display: none;
   padding-top: 20px;
@@ -604,6 +627,12 @@ ul.sub-menu {
   color: #999999;
 }
 
+.login-form input[type="email"]:-ms-input-placeholder,
+.login-form input[type="text"]:-ms-input-placeholder {
+  font-weight: 400;
+  color: #999999;
+}
+
 .login-form-links {
   display: block;
   padding: 0;
@@ -648,6 +677,8 @@ ul.sub-menu {
 
 .login-form-wrapper:hover,
 .login-form-wrapper:focus,
+.login-form-container:hover,
+.login-form-container:focus,
 .login-form:hover,
 .login-form:focus {
   display: block;
@@ -693,6 +724,7 @@ ul.sub-menu {
   position: absolute;
   top: 39px;
   right: 0;
+  z-index: 900;
 
   display: none;
   padding-top: 20px;
@@ -1030,7 +1062,10 @@ ul.sub-menu {
 
 .filters-form {
   display: flex;
+  justify-content: flex-start;
   flex-wrap: wrap;
+
+  width: 900px;
 }
 
 .filters-form fieldset {
@@ -1062,40 +1097,41 @@ ul.sub-menu {
 
 .sorting {
   display: flex;
-  min-width: 200px;
-  min-height: 37px;
+  flex-direction: column;
   padding: 0;
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
 }
 
 .sorting label {
   padding-top: 6px;
-  padding-left: 17px;
+  padding-left: 16px;
   margin-bottom: 5px;
 }
 
 .sorting-select {
   position: relative;
 
-  padding-top: 11px;
-  padding-bottom: 10px;
-  padding-left: 16px;
-  padding-right: 34px;
+  width: 193px;
+  height: 37px;
+  padding: 0;
+  /* padding-bottom: 9px; */
+  padding-left: 14px;
+  /* padding-right: 34px; */
 
   color: #ffffff;
 
   background-color: rgba(248, 247, 244, 0.2);
   background-image: url("../img/icon-down-white.svg");
   background-repeat: no-repeat;
-  background-position: 93% 50%;
-  border-radius: 20px;
+  background-position: 92.5% 50%;
+  border-radius: 23px;
   border: 0;
 
   -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
 }
 
 .sorting-select:hover,
@@ -1106,6 +1142,8 @@ ul.sub-menu {
 
 .sorting-select-item {
   color: #323232;
+  vertical-align: bottom;
+  text-align: center;
 
   background-color: #ffffff;
 }
@@ -1116,15 +1154,17 @@ ul.sub-menu {
 
 .pricerange {
   display: flex;
+  flex-direction: column;
   min-width: 220px;
   min-height: 37px;
   padding: 0;
   margin: 0;
+  margin-left: 16px;
 }
 
 .pricerange-title {
   padding-top: 6px;
-  padding-left: 24px;
+  padding-left: 15px;
   margin: 0;
   margin-bottom: 6px;
 }
@@ -1134,7 +1174,6 @@ ul.sub-menu {
   height: 36px;
   padding-top: 16px;
   margin: 0;
-  margin-left: 9px;
   box-sizing: border-box;
 
   background-color: rgba(255, 255, 255, 0.2);
@@ -1198,7 +1237,7 @@ ul.sub-menu {
   min-width: 415px;
   min-height: 37px;
   margin: 0;
-  margin-left: 15px;
+  margin-left: 13px;
   padding: 0;
   box-sizing: border-box;
 }
@@ -1336,7 +1375,7 @@ ul.sub-menu {
   margin: 0;
   margin-bottom: 6px;
   padding: 0;
-  padding-top: 1px;
+  /* padding-top: 1px; */
   padding-left: 16px;
 }
 
@@ -1445,7 +1484,7 @@ ul.sub-menu {
   padding-left: 28px;
   padding-right: 28px;
   margin: 0;
-  margin-top: 23px;
+  margin-top: 22px;
   margin-left: 14px;
   box-sizing: border-box;
 
@@ -2111,6 +2150,11 @@ h3.slim-title {
   color: #999999;
 }
 
+.subscribe form input[type="email"]:-ms-input-placeholder {
+  font-weight: 400;
+  color: #999999;
+}
+
 .subscribe-btn {
   float: left;
 
@@ -2281,8 +2325,7 @@ hr.main-border-line {
   list-style: none;
 }
 
-.social-btn {
-  display: block;
+.social-btn .social-pic {
   width: 32px;
   height: 32px;
   border: solid 3px rgba(255, 255, 255, 0.5);
@@ -2292,14 +2335,14 @@ hr.main-border-line {
   opacity: 0.8;
 }
 
-.social-btn:hover {
+.social-btn:hover .social-pic {
   border: solid 3px rgba(255, 255, 255, 0.7);
 
   opacity: 1;
 }
 
-.social-btn:active,
-.social-btn:focus {
+.social-btn:active .social-pic,
+.social-btn:focus .social-pic {
   border: solid 3px rgba(255, 255, 255, 0.7);
   opacity: 1;
 }
@@ -2559,8 +2602,14 @@ hr.main-border-line {
   color: #999999;
 }
 
-.feedback-form input[type="text"]::-ms-input-placeholder,
-.feedback-form textarea::-ms-input-placeholder {
+.feedback-form input[type="text"]:-ms-input-placeholder,
+.feedback-form textarea:-ms-input-placeholder {
+  font-weight: 400;
+  color: #999999;
+}
+
+.feedback-form input[type="text"]:-ms-input-placeholder,
+.feedback-form textarea:-ms-input-placeholder {
   font-weight: 400;
   color: #999999;
 }
