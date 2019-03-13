@@ -17,8 +17,6 @@ body {
   background-image: url("../img/icecream-green.png");
   background-repeat: no-repeat;
   background-position: 50.1% 0%;
-
-  /* transition: background-image 0.5s ease, background-color 0.5s ease; */
 }
 
 .main-page-wrapper::before,
@@ -36,16 +34,6 @@ body {
   background-image: url("../img/icecream-pink.png");
 }
 
-
-/* .visually-hidden {
-  position: absolute;
-  clip: rect(0, 0, 0, 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-} */
-
-/* .visually-hidden:not(:focus):not(:active), */
 .visually-hidden,
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
@@ -201,7 +189,6 @@ a:active {
   display: block;
   padding: 7px 14px;
   padding-right: 13px;
-
   font-weight: 700;
 }
 
@@ -1115,10 +1102,12 @@ ul.sub-menu {
   width: 193px;
   height: 37px;
   padding: 0;
-  /* padding-bottom: 9px; */
-  padding-left: 14px;
-  /* padding-right: 34px; */
+  padding-left: 13px;
 
+  font-size: 16px;
+  line-height: 18px;
+  text-align: left;
+  vertical-align: middle;
   color: #ffffff;
 
   background-color: rgba(248, 247, 244, 0.2);
@@ -1481,6 +1470,7 @@ ul.sub-menu {
   width: 144px;
   height: 36px;
   padding: 0;
+  padding-bottom: 1px;
   padding-left: 28px;
   padding-right: 28px;
   margin: 0;
@@ -1521,6 +1511,7 @@ ul.sub-menu {
   margin: 0 auto;
   margin-top: 2px;
   margin-bottom: 20px;
+  box-sizing: border-box;
 
   font-size: 35px;
   line-height: 41px;
