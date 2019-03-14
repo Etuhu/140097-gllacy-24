@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="utf-8">
-  <title>HTML Academy: Глейси</title>
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
-  <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
-</head>
-<body class="catalog-page-body">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Глейси</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style-min.css" rel="stylesheet">
+  </head>
+  <body class="catalog-page-body">
     <header class="main-header container">
       <a class="logo-link" href="index.html"><img class="logo" src="img/logo.svg" width="154" height="64" alt="Логотип магазина Глэйси"></a>
       <nav class="main-header-navigation">
@@ -30,7 +30,7 @@
         <div class="search-form-wrapper">
           <div class="search-form-container">
             <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
-              <label class="visually-hidden" for="searchfield">Поиск по сайту</label><input type="search" name="search" id="searchfield" placeholder="Что ищем?">
+              <label class="visually-hidden" for="searchfield">Поиск по сайту</label><input type="text" name="search" id="searchfield" placeholder="Что ищем?">
             </form>
           </div>
         </div>
@@ -113,36 +113,36 @@
             <legend>Жирность:</legend>
             <ul class="fatness-sorting">
               <li class="fatness-sorting-item">
-                <input class="visually-hidden fatness-sorting-input" type="radio" name="fatness" id="0%" value="0%">
-                <label for="0%">0%</label>
+                <input class="visually-hidden fatness-sorting-input" type="radio" name="fatness" id="0%" value="0%" tabindex="-1">
+                <label for="0%" tabindex="0">0%</label>
               </li>
               <li class="fatness-sorting-item">
-                <input class="visually-hidden fatness-sorting-input" type="radio" name="fatness" id="<10%" value="<10%" checked>
-                <label for="<10%">до 10%</label>
+                <input class="visually-hidden fatness-sorting-input" type="radio" name="fatness" id="<10%" value="<10%" checked tabindex="-1">
+                <label for="<10%" tabindex="0">до 10%</label>
               </li>
               <li class="fatness-sorting-item">
-                <input class="visually-hidden fatness-sorting-input" type="radio" name="fatness" id="<30%" value="<30%">
-                <label for="<30%">до 30%</label>
+                <input class="visually-hidden fatness-sorting-input" type="radio" name="fatness" id="<30%" value="<30%" tabindex="-1">
+                <label for="<30%" tabindex="0">до 30%</label>
               </li>
               <li class="fatness-sorting-item">
-                <input class="visually-hidden fatness-sorting-input" type="radio" name="fatness" id=">30%" value=">30%">
-                <label for=">30%">выше 30%</label>
+                <input class="visually-hidden fatness-sorting-input" type="radio" name="fatness" id=">30%" value=">30%" tabindex="-1">
+                <label for=">30%" tabindex="0">выше 30%</label>
               </li>
             </ul>
           </fieldset>
           <fieldset class="type">
             <legend>Наполнители:</legend>
             <ul class="type-sorting">
-              <li class="type-sorting-item"><input class="visually-hidden type-sorting-input" type="checkbox" name="chocolate" id="chocolate" value="yes" checked>
-              <label for="chocolate">шоколадные</label></li>
-              <li class="type-sorting-item"><input class="visually-hidden type-sorting-input" type="checkbox" name="sugar" id="sugar" value="yes" checked>
-              <label for="sugar">сахарные присыпки</label></li>
-              <li class="type-sorting-item"><input class="visually-hidden type-sorting-input" type="checkbox" name="fruits" id="fruits" value="yes">
-              <label for="fruits">фрукты</label></li>
-              <li class="type-sorting-item"><input class="visually-hidden type-sorting-input" type="checkbox" name="syrups" id="syrups" value="yes">
-              <label for="syrups">сиропы</label></li>
-              <li class="type-sorting-item"><input class="visually-hidden type-sorting-input" type="checkbox" name="jams" id="jams" value="yes">
-              <label for="jams">джемы</label></li>
+              <li class="type-sorting-item"><input class="visually-hidden type-sorting-input" type="checkbox" name="chocolate" id="chocolate" value="yes" checked tabindex="-1">
+              <label for="chocolate" tabindex="0">шоколадные</label></li>
+              <li class="type-sorting-item"><input class="visually-hidden type-sorting-input" type="checkbox" name="sugar" id="sugar" value="yes" checked tabindex="-1">
+              <label for="sugar" tabindex="0">сахарные присыпки</label></li>
+              <li class="type-sorting-item"><input class="visually-hidden type-sorting-input" type="checkbox" name="fruits" id="fruits" value="yes" tabindex="-1">
+              <label for="fruits" tabindex="0">фрукты</label></li>
+              <li class="type-sorting-item"><input class="visually-hidden type-sorting-input" type="checkbox" name="syrups" id="syrups" value="yes" tabindex="-1">
+              <label for="syrups" tabindex="0">сиропы</label></li>
+              <li class="type-sorting-item"><input class="visually-hidden type-sorting-input" type="checkbox" name="jams" id="jams" value="yes" tabindex="-1">
+              <label for="jams" tabindex="0">джемы</label></li>
             </ul>
           </fieldset>
           <button class="filter-btn" type="submit">Применить</button>
