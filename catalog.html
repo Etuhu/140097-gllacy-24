@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style-min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="catalog-page-body">
     <header class="main-header container">
@@ -30,7 +30,8 @@
         <div class="search-form-wrapper">
           <div class="search-form-container">
             <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
-              <label class="visually-hidden" for="searchfield">Поиск по сайту</label><input type="text" name="search" id="searchfield" placeholder="Что ищем?">
+              <label class="visually-hidden" for="searchfield">Поиск по сайту</label>
+              <input type="search" name="search" id="searchfield" placeholder="Что ищем?">
             </form>
           </div>
         </div>
@@ -53,7 +54,6 @@
           <div class ="cart-content">
             <h2 class="visually-hidden">Содержимое корзины</h2>
             <table class="cart-content-table">
-              <caption>Итого: 750 руб.</caption>
               <tr class="cart-content-position">
                 <td class="cart-content-item close-position-item" aria-label="Удалить из корзины"><button class="delete-content" type="button"></button></td>
                 <td class="cart-content-item cart-content-image citrus-icecream-mini"></td>
@@ -68,6 +68,11 @@
                 <td class="cart-content-item weight-position-item">1,5 кг х <span>300 руб.</span></td>
                 <td class="cart-content-item price-position-item">450 руб.</td>
               </tr>
+              <tfoot class="cart-content-footer">
+                <tr class="cart-content-total">
+                  <td class="total-item" colspan="5">Итого: 750 руб.</td>
+                </tr>
+              </tfoot>
             </table>
             <a class="btn cart-content-btn" href="#">Оформить заказ</a>
           </div>
@@ -100,7 +105,10 @@
             </select>
           </fieldset>
           <fieldset class="pricerange">
-            <p class="pricerange-title">Цена: 100 руб. – 500 руб.</p>
+            <span class="pricerange-title">Цена:</span>
+            <input class="price-field" type="text" name="min-price" id="min-price" value="100"><label for="min-price">руб.</label>
+            –
+            <input class="price-field" type="text" name="max-price" id="max-price" value="500"><label for="max-price">руб.</label>
             <div class="pricerange-filter">
               <div class="pricerange-filter-line">
                 <div class="pricerange-button pricerange-button-left"></div>
@@ -202,7 +210,7 @@
           <li class="catalog-item">
             <img src="img/vanilla-icecream.png" width="267" height="267" alt="Сливочно-ванильное с кусочками шоколада">
             <p><span class="catalog-item-price">440</span>₽<span class="price-sub">/кг</span></p>
-            <h3><a href="#">Сливочно-ванильное с кусочками шоколада</a></h3>
+            <h3 class="slim-title"><a href="#">Сливочно-ванильное с кусочками шоколада</a></h3>
             <a class="btn catalog-item-btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
@@ -236,7 +244,6 @@
           <li class="arrow"><a class="arrow-right" href="#" title="Перейти на следующую страницу"></a></li>
         </ul>
       </section>
-      <hr class="main-border-line">
     </main>
     <footer class="main-footer catalog-footer container">
       <div class="social">

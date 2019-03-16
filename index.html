@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style-min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
@@ -35,7 +35,7 @@
             <div class="search-form-container">
               <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
                 <label class="visually-hidden" for="searchfield">Поиск по сайту</label>
-                <input type="text" name="search" id="searchfield" placeholder="Что ищем?">
+                <input type="search" name="search" id="searchfield" placeholder="Что ищем?">
               </form>
             </div>
           </div>
@@ -149,7 +149,7 @@
           <section class="subscribe">
             <h2 class="visually-hidden">Подписаться на рассылку от GllacyShop</h2>
             <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-            <form action="https://echo.htmlacademy.ru" method="post">
+            <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
               <label class="visually-hidden" for="subscribefield">Укажите вашу электронную почту</label>
               <input type="email" name="email" id="subscribefield" placeholder="Электронная почта">
               <button class="btn subscribe-btn" type="submit">Отправить</button>
@@ -168,7 +168,7 @@
               <span>8 812 450-25-25</span>
               <span>(с 10 до 20 ежедневно)</span>
             </p>
-            <a class="btn feedback-btn" href="write-to-us.html)">Форма обратной связи</a>
+            <a class="btn feedback-btn" href="write-to-us.html">Форма обратной связи</a>
           </div>
         </section>
       </main>
@@ -264,7 +264,7 @@
         <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
           <label class="visually-hidden" for="feedback-username">Укажите своё имя</label><input type="text" name="feedback-username" id="feedback-username" placeholder="Как вас зовут?">
           <label class="visually-hidden" for="feedback-email">Укажите свою почту</label><input type="text" name="feedback-email" id="feedback-email" placeholder="Ваша почта для ответа?">
-          <label class="visually-hidden" for="feedback-text">Укажите текст вашего отзыва</label><textarea name="feedback-text" id="feedback-text" cols="40" rows="5" placeholder="Напишите что-нибудь..."></textarea>
+          <label class="visually-hidden" for="feedback-text">Укажите текст вашего отзыва</label><textarea name="feedback-text" id="feedback-text" placeholder="Напишите что-нибудь..."></textarea>
           <button class="btn feedback-form-btn" type="submit">Отправить</button>
           <button class="feedback-form-close" type="button" aria-label="Закрыть окно обратной связи"></button>
         </form>
