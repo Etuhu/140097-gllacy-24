@@ -2615,9 +2615,9 @@ p.contacts-address {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
+  /* -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between;
+          justify-content: space-between; */
   min-height: 103px;
 }
 
@@ -2700,6 +2700,7 @@ p.contacts-address {
 .footer-info {
   width: 450px;
   margin: 0;
+  margin-left: 119px;
   padding: 0;
 }
 
@@ -2792,6 +2793,7 @@ p.contacts-address {
   padding: 0;
   margin: 0;
   margin-top: 19px;
+  margin-left: 120px;
 }
 
 .catalog-footer .copyright {
@@ -2814,18 +2816,21 @@ p.contacts-address {
 .htmlacademy-logo img {
   padding: 0;
   margin: 0;
-  margin-left: 2px;
+  margin-left: 3px;
 }
 
 .make-in-htmlacademy {
   display: inline-block;
-
   padding: 0;
+  padding-left: 1px;
   margin: 0;
+
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
+  text-align: left;
   vertical-align: middle;
+  white-space: nowrap;
   color: #fefefe;
 }
 
