@@ -13,7 +13,7 @@
       <a class="logo-link" href="index.html"><img class="logo" src="img/logo.svg" width="154" height="64" alt="Логотип магазина Глэйси"></a>
       <nav class="main-header-navigation">
         <ul class="main-menu">
-          <li class="main-menu-catalog current-page-item"><a href="#">Каталог</a>
+          <li class="main-menu-item main-menu-catalog current-page-item"><a href="#">Каталог</a>
             <ul class="sub-menu">
               <li class="sub-menu-item sub-menu-item-new"><a href="#">Новинки</a></li>
               <li class="sub-menu-item sub-menu-item-current"><a href="catalog.html">Сливочное</a></li>
@@ -22,8 +22,8 @@
               <li class="sub-menu-item"><a href="#">Мелорин</a></li>
             </ul>
           </li>
-          <li><a href="#">Доставка и оплата</a></li>
-          <li><a href="#">О Компании</a></li>
+          <li class="main-menu-item"><a href="#">Доставка и оплата</a></li>
+          <li class="main-menu-item"><a href="#">О Компании</a></li>
         </ul>
       </nav>
       <div class="user-block">
@@ -107,9 +107,9 @@
           </fieldset>
           <fieldset class="pricerange">
             <span class="pricerange-title">Цена:</span>
-            <input class="price-field" type="text" name="min-price" id="min-price" value="100"><label for="min-price">руб.</label>
+            <input class="price-field" type="text" name="min-price" id="min-price" value="100" aria-label="Установите минимальную цену"><label for="min-price">руб.</label>
             –
-            <input class="price-field" type="text" name="max-price" id="max-price" value="500"><label for="max-price">руб.</label>
+            <input class="price-field" type="text" name="max-price" id="max-price" value="500" aria-label="Установите максимальную цену"><label for="max-price">руб.</label>
             <div class="pricerange-filter">
               <div class="pricerange-filter-line">
                 <div class="pricerange-button pricerange-button-left"></div>
@@ -163,73 +163,73 @@
           <li class="catalog-item">
             <img src="img/citrus-icecream.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
             <p><span class="catalog-item-price">310</span>₽<span class="price-sub">/кг</span></p>
-            <h3><a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
+            <h3 class="catalog-item-title"><a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
             <a class="btn catalog-item-btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <img src="img/coffee-icecream.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
             <p><span class="catalog-item-price">380</span>₽<span class="price-sub">/кг</span></p>
-            <h3><a href="#">Сливочно-кофейное с кусочками шоколада</a></h3>
+            <h3 class="catalog-item-title"><a href="#">Сливочно-кофейное с кусочками шоколада</a></h3>
             <a class="btn catalog-item-btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <img src="img/strawberry-icecream.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
             <p><span class="catalog-item-price">355</span>₽<span class="price-sub">/кг</span></p>
-            <h3><a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
+            <h3 class="catalog-item-title"><a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
             <a class="btn catalog-item-btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <img src="img/caramel-cream-icecream.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
             <p><span class="catalog-item-price">415</span>₽<span class="price-sub">/кг</span></p>
-            <h3><a href="#">Сливочное крем-брюле с карамельной подливкой</a></h3>
+            <h3 class="catalog-item-title"><a href="#">Сливочное крем-брюле с карамельной подливкой</a></h3>
             <a class="btn catalog-item-btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <img src="img/cowberry-icecream.png" width="267" height="267" alt="Сливочное с брусничным джемом">
             <p><span class="catalog-item-price">325</span>₽<span class="price-sub">/кг</span></p>
-            <h3 class="slim-title"><a href="#">Сливочное с брусничным джемом</a></h3>
+            <h3 class="catalog-item-title slim-title"><a href="#">Сливочное с брусничным джемом</a></h3>
             <a class="btn catalog-item-btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <img src="img/blueberry-icecream.png" width="267" height="267" alt="Сливочно-черничное с цельными ягодами черники">
             <p><span class="catalog-item-price">410</span>₽<span class="price-sub">/кг</span></p>
-            <h3><a href="#">Сливочно-черничное с цельными ягодами черники</a></h3>
+            <h3 class="catalog-item-title"><a href="#">Сливочно-черничное с цельными ягодами черники</a></h3>
             <a class="btn catalog-item-btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <img src="img/lemon-icecream.png" width="267" height="267" alt="Сливочно-лимонное с карамельной присыпкой">
             <p><span class="catalog-item-price">375</span>₽<span class="price-sub">/кг</span></p>
-            <h3><a href="#">Сливочно-лимонное с карамельной присыпкой</a></h3>
+            <h3 class="catalog-item-title"><a href="#">Сливочно-лимонное с карамельной присыпкой</a></h3>
             <a class="btn catalog-item-btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <img src="img/chocolate-icecream.png" width="267" height="267" alt="Сливочное с шоколадной стружкой">
             <p><span class="catalog-item-price">320</span>₽<span class="price-sub">/кг</span></p>
-            <h3><a href="#">Сливочное с шоколадной стружкой</a></h3>
+            <h3 class="catalog-item-title"><a href="#">Сливочное с шоколадной стружкой</a></h3>
             <a class="btn catalog-item-btn" href="#">Быстрый просмотр</a>
           </li>
-          <li class="catalog-item">
+          <li class="catalog-item vanilla-icecream-item">
             <img src="img/vanilla-icecream.png" width="267" height="267" alt="Сливочно-ванильное с кусочками шоколада">
             <p><span class="catalog-item-price">440</span>₽<span class="price-sub">/кг</span></p>
-            <h3 class="slim-title"><a href="#">Сливочно-ванильное с кусочками шоколада</a></h3>
+            <h3 class="catalog-item-title slim-title"><a href="#">Сливочно-ванильное с кусочками шоколада</a></h3>
             <a class="btn catalog-item-btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <img src="img/menthol-icecream.png" width="267" height="267" alt="Сливочноe с ментоловым сиропом">
             <p><span class="catalog-item-price">435</span>₽<span class="price-sub">/кг</span></p>
-            <h3 class="slim-title"><a href="#">Сливочноe с ментоловым сиропом</a></h3>
+            <h3 class="catalog-item-title slim-title"><a href="#">Сливочноe с ментоловым сиропом</a></h3>
             <a class="btn catalog-item-btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <img src="img/black-chocolate-icecream.png" width="267" height="267" alt="Сливочное с кусочками черного шоколада">
             <p><span class="catalog-item-price">355</span>₽<span class="price-sub">/кг</span></p>
-            <h3><a href="#">Сливочное с кусочками черного шоколада</a></h3>
+            <h3 class="catalog-item-title"><a href="#">Сливочное с кусочками черного шоколада</a></h3>
             <a class="btn catalog-item-btn" href="#">Быстрый просмотр</a>
           </li>
           <li class="catalog-item">
             <img src="img/mint-icecream.png" width="267" height="267" alt="Сливочное с мятным сиропом">
             <p><span class="catalog-item-price">420</span>₽<span class="price-sub">/кг</span></p>
-            <h3><a href="#">Сливочное с мятным сиропом</a></h3>
+            <h3 class="catalog-item-title"><a href="#">Сливочное с мятным сиропом</a></h3>
             <a class="btn catalog-item-btn" href="#">Быстрый просмотр</a>
           </li>
         </ul>

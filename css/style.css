@@ -264,7 +264,7 @@ a:active {
   outline: none;
 }
 
-.main-menu > li > a::after {
+.main-menu-item > a::after {
   content: "";
   display: block;
   height: 1px;
@@ -1112,6 +1112,24 @@ ul.sub-menu {
   background-color: #ffffff;
 }
 
+#product-1:hover ~ .main-page-wrapper label[for="product-1"],
+#product-2:hover ~ .main-page-wrapper label[for="product-2"],
+#product-3:hover ~ .main-page-wrapper label[for="product-3"] {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+#product-1:checked:hover ~ .main-page-wrapper label[for="product-1"],
+#product-2:checked:hover ~ .main-page-wrapper label[for="product-2"],
+#product-3:checked:hover ~ .main-page-wrapper label[for="product-3"] {
+  background-color: #ffffff;
+}
+
+#product-1:active ~ .main-page-wrapper label[for="product-1"],
+#product-2:active ~ .main-page-wrapper label[for="product-2"],
+#product-3:active ~ .main-page-wrapper label[for="product-3"] {
+  background-color: #ffffff;
+}
+
 .slide-title {
   width: 900px;
   margin-top: 275px;
@@ -1699,7 +1717,7 @@ ul.sub-menu {
 
 .catalog {
   padding: 0;
-  margin-bottom: 42px;
+  margin-bottom: 40px;
 }
 
 .catalog-title {
@@ -2010,7 +2028,7 @@ ul.sub-menu {
   font-size: 30px;
 }
 
-.catalog-item h3 {
+.catalog-item-title {
   position: relative;
 
   padding: 0;
@@ -2024,7 +2042,11 @@ ul.sub-menu {
   color: #ffffff;
 }
 
-.catalog-item h3 a {
+.vanilla-icecream-item .catalog-item-title {
+  margin-top: 10px;
+}
+
+.catalog-item-title a {
   font-size: 16px;
   line-height: 22px;
   font-weight: 500;
@@ -2032,9 +2054,9 @@ ul.sub-menu {
           box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
-.catalog-item h3 a:hover,
-.catalog-item h3 a:focus,
-.catalog-item h3 a:active {
+.catalog-item-title a:hover,
+.catalog-item-title a:focus,
+.catalog-item-title a:active {
   -webkit-box-shadow: 0 1px 0 #ffbc9e;
           box-shadow: 0 1px 0 #ffbc9e;
 }
