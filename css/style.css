@@ -1710,6 +1710,8 @@ ul.sub-menu {
 }
 
 .filter-btn:active {
+  color: #323232;
+
   background-color: #ededed;
   -webkit-box-shadow: inset 0 2px 1px 0 #696969;
           box-shadow: inset 0 2px 1px 0 #696969;
@@ -2883,10 +2885,10 @@ p.contacts-address {
 }
 
 .modal-feedback {
-  position: fixed;
-  top: 338px;
-  right: 711px;
+  position: absolute;
   z-index: 2;
+  left: 50.1%;
+  top: 57.7%;
 
   display: none;
   width: 477px;
@@ -2900,6 +2902,8 @@ p.contacts-address {
 
   background-color: #f8f7f4;
   border-radius: 10px;
+
+  transform: translate(-50%,-50%);
 }
 
 .modal-feedback h2 {
