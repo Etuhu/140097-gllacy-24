@@ -2540,39 +2540,12 @@ h3.slim-title {
   background-position: center;
 }
 
-.map::before {
-  content: "";
-  position: absolute;
-  top: 138px;
-  left: 266px;
-  z-index: 2;
-
-  display: block;
-  width: 80px;
-  height: 140px;
-
-  background-image: url("../img/marker-map.svg");
-  background-repeat: no-repeat;
-  background-position: center;
+.map iframe {
+  border: none;
 }
 
-.map::after {
-  content: "";
-  position: absolute;
-  top: 170px;
-  left: 302px;
-  z-index: 1;
-
-  display: block;
-  width: 182px;
-  height: 110px;
-
-  background-image: url("../img/marker-map-shadow.png");
-  background-repeat: no-repeat;
-  background-position: center;
-}
 .contacts {
-  position: relative;
+  position: absolute;
   top: 62px;
   left: 871px;
   width: 302px;
