@@ -2903,6 +2903,114 @@ p.contacts-address {
   z-index: 100;
 }
 
+@keyframes bounce {
+  0% {
+    transform: translateX(-50%) translateY(-1000%);
+  }
+
+  5% {
+    transform: translateX(-50%) translateY(-97%);
+  }
+
+  10% {
+    transform: translateX(-50%) translateY(-95%);
+  }
+
+  15% {
+    transform: translateX(-50%) translateY(-92%);
+  }
+
+  20% {
+    transform: translateX(-50%) translateY(-90%);
+  }
+
+  25% {
+    transform: translateX(-50%) translateY(-87%);
+  }
+
+  30% {
+    transform: translateX(-50%) translateY(-85%);
+  }
+
+  35% {
+    transform: translateX(-50%) translateY(-82%);
+  }
+
+  40% {
+    transform: translateX(-50%) translateY(-80%);
+  }
+
+  45% {
+    transform: translateX(-50%) translateY(-77%);
+  }
+
+  50% {
+    transform: translateX(-50%) translateY(-75%);
+  }
+
+  55% {
+    transform: translateX(-50%) translateY(-72%);
+  }
+
+  60% {
+    transform: translateX(-50%) translateY(-70%);
+  }
+
+  65% {
+    transform: translateX(-50%) translateY(-67%);
+  }
+
+  70% {
+    transform: translateX(-50%) translateY(-65%);
+  }
+
+  75% {
+    transform: translateX(-50%) translateY(-62%);
+  }
+
+  80% {
+    transform: translateX(-50%) translateY(-60%);
+  }
+
+  85% {
+    transform: translateX(-50%) translateY(-57%);
+  }
+
+  90% {
+    transform: translateX(-50%) translateY(-55%);
+  }
+
+  96% {
+    transform: translateX(-50%) translateY(-52%);
+  }
+
+  100% {
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-52%) translateY(-50%);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(-48%) translateY(-50%);
+  }
+}
+
 .modal-feedback {
   position: absolute;
   z-index: 2;
@@ -2927,6 +3035,21 @@ p.contacts-address {
       -ms-transform: translate(-50%,-50%);
 
           transform: translate(-50%,-50%);
+}
+
+.modal-wrapper-show {
+  display: block;
+}
+
+.modal-feedback-show {
+  display: block;
+
+  animation: bounce 0.1s;
+  transition-timing-function: linear;
+}
+
+.modal-error {
+  animation: shake 0.4s;
 }
 
 .modal-feedback h2 {
@@ -3076,6 +3199,8 @@ p.contacts-address {
   background-repeat: no-repeat;
   background-position: center;
   border: 0;
+
+  cursor: pointer;
 }
 
 .feedback-form-btn {
